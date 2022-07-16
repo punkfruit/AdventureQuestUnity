@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
 
+    [Header("movement")]
     public walkDirection walkdir;
     public charClass classs;
     public SpriteRenderer headSPR, bodySPR;
@@ -21,6 +22,12 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D theRB;
     public Animator anim;
     public bool canMove = true;
+
+    [Header("combat")]
+    public Transform weaponSpawnPoint;
+    public Transform wEast, wWest, wNorth, wSouth;
+    public GameObject sword;
+    public bool canSwing = true;
 
     private void Awake()
     {
@@ -61,6 +68,19 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetBool("isMoving", false);
             }
+
+
+            if (Input.GetButtonDown("Swing"))
+            {
+                if (weaponSpawnPoint != null && canSwing)
+                {
+                    var swrd = Instantiate(sword, weaponSpawnPoint);
+                    swrd.transform.parent = gameObject.transform;
+                    canSwing = false;
+                }
+
+            }
+
         }
         else
         {
@@ -90,6 +110,8 @@ public class PlayerController : MonoBehaviour
 
         WalkDirSpriteSwitch();
 
+        
+
     }
 
 
@@ -98,6 +120,7 @@ public class PlayerController : MonoBehaviour
         switch (walkdir)
         {
             case walkDirection.West:
+                weaponSpawnPoint = wWest;
                 switch (classs)
                 {
                     case charClass.Blank:
@@ -129,6 +152,7 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case walkDirection.East:
+                weaponSpawnPoint = wEast;
                 switch (classs)
                 {
                     case charClass.Blank:
@@ -161,6 +185,7 @@ public class PlayerController : MonoBehaviour
 
                 break;
             case walkDirection.North:
+                weaponSpawnPoint = wNorth;
                 switch (classs)
                 {
                     case charClass.Blank:
@@ -187,6 +212,7 @@ public class PlayerController : MonoBehaviour
 
                 break;
             case walkDirection.South:
+                weaponSpawnPoint = wSouth;
                 switch (classs)
                 {
                     case charClass.Blank:

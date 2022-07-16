@@ -222,7 +222,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1404,8 +1403,8 @@ TextureImporter:
         y: 63
         width: 17
         height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1425,8 +1424,8 @@ TextureImporter:
         y: 63
         width: 16
         height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1721,73 +1720,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      wizardFront: 8652717418824411258
-      barBlank: 8190686319042436049
-      master1_52: -5771696530873763454
-      staff: -8864084218197642301
-      bardRight: 6949456468882341071
-      master1_54: 3553163917368800348
-      wizardBehind: 3081579028717216497
-      master1_37: -2497226708406086928
-      master1_38: -4146760809693554293
-      sword: -8077680831566646652
-      rogueBodRight: 2890876094477532685
-      rock2: -5370889927042715938
-      master1_31: -3259884762666992415
-      master1_24: -6384416611195822785
-      rock3: 5048789707313534050
-      master1_51: -4536238717810328249
-      master1_50: 5227961471946465462
-      arrow1: -826118518896166216
-      wizardRight: 5296715896837640551
-      heartHalf: 1024780900352892978
-      master1_53: -8175560817306251397
-      magic1: 8117067962658932451
-      master1_43: 2449746090631350030
-      barbFront: 2682199809495005181
-      master1_47: -950788052222302347
-      master1_33: -3320413475508027116
-      heartFull: 212891961374766704
-      master1_32: -1881977176838241013
-      smallSign: -6590070658921623261
-      master1_44: 37860936505648596
-      barbBodRight: -5881114760040384170
-      master1_28: -3407976938129784647
-      bardBehind: -6970091053969924835
-      master1_46: -5079283916558622749
-      rogueFront: 2577618624320974641
-      master1_34: -7265696208066326032
-      rogueRight: 7428220235548650138
-      blank: -8356266571557779399
-      barbBodFront: -9028812558194515316
-      heartEmpty: 7493508907629768476
-      master1_40: 3347152266505495330
-      master1_42: -7565183352990719816
-      bigSword: 196650344404761573
-      visualCueSmall: -5747323358918690724
-      master1_45: 5032517388254104972
-      rock1: -2077818301289743218
-      healthPotion: -2656160258822588245
-      magic2: 179806135874867650
-      master1_48: -1270582716395869012
-      barbRight: 3150286691470929900
-      master1_41: -1335916581963752423
-      master1_49: 8060550225365956352
-      greenPotion: -5624752182385468958
-      master1_29: 1699825955593172288
-      rogueBodFront: 7048166569220461095
-      master1_39: 3291535506913923661
-      dagger: -4926867101868200938
-      bow1: -2337290313113670502
-      bardFront: 638499635141221123
-      master1_35: -213856788515064062
-      master1_36: 5337858484722722336
-      blankBod: -4053917572027995743
-      master1_30: -937832461621007744
-      barSurround: -4503520927408990855
-      rogueBehind: -4273545163525295944
-      barbBehind: -2490345816179410087
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
