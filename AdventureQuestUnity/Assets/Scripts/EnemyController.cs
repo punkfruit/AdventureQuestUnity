@@ -32,7 +32,7 @@ public class EnemyController : MonoBehaviour
     {
         WalkDirSpriteSwitch();
 
-        anim.SetBool("IsMoving", isMoving);
+        //anim.SetBool("IsMoving", isMoving);
     }
 
     public void WalkDirSpriteSwitch()
