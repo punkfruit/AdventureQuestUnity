@@ -14,6 +14,11 @@ public class DialogueManager : MonoBehaviour
 
     public bool dialogueIsPlaying;
 
+    public bool sentenceIsTyping;
+
+    public float typeSpeed = 0.03f;
+    public string sentence;
+
     private void Awake()
     {
         if(instance != null)
@@ -35,6 +40,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         dialogueIsPlaying = true;
+        sentenceIsTyping = false;
         dialogueAnim.SetBool("isOpen", true);
         PlayerController.instance.canMove = false;
         nameText.text = dialogue.name;
@@ -49,25 +55,45 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        if(sentences.Count == 0 && !sentenceIsTyping)
         {
             EndDialogue();
             return;
         }
+         
 
-        string sentence = sentences.Dequeue();
+        
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        if (sentenceIsTyping)
+        {
+
+            ShowSentence(sentence);
+        }
+        else
+        {
+            sentence = sentences.Dequeue();
+            StartCoroutine(TypeSentence(sentence));
+        }
+
+
     }
 
     IEnumerator TypeSentence(string sentence)
     {
+        sentenceIsTyping = true;
         dialogueText.text = "";
         foreach(char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSeconds(typeSpeed);
         }
+        sentenceIsTyping = false;
+    }
+
+    public void ShowSentence(string sentence)
+    {
+        dialogueText.text = sentence;
+        sentenceIsTyping = false;
     }
 
     public void EndDialogue()
