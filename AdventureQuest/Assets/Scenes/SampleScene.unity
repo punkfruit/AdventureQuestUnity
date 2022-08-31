@@ -5913,6 +5913,9 @@ MonoBehaviour:
   dialogueText: {fileID: 1514008150}
   dialogueAnim: {fileID: 1242557998}
   dialogueIsPlaying: 0
+  sentenceIsTyping: 0
+  typeSpeed: 0.03
+  sentence: 
 --- !u!4 &1346902111
 Transform:
   m_ObjectHideFlags: 0
