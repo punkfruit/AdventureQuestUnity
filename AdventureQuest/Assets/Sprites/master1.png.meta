@@ -883,7 +883,7 @@ TextureImporter:
         width: 9
         height: 25
       alignment: 9
-      pivot: {x: 0.1607651, y: 0.05663}
+      pivot: {x: 0.23299047, y: 0.21113616}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1498,15 +1498,14 @@ TextureImporter:
       wizardFront: -955222825
       master1_52: 356673772
       Tile-2: 1499506906
-      staff: 1986552456
+      Tile-13: 1365515509
       bardRight: -1190244543
       Tile-15: 461656113
-      Tile-13: 1365515509
       master1_15: -934049296
       wizardBehind: -756910471
       sword: 1367977541
       rogueBodRight: 70059638
-      barbBehind: 205157159
+      master1_16: 1746602183
       rock2: -1562917662
       master1_31: -913275140
       rock3: 1212693800
@@ -1514,6 +1513,7 @@ TextureImporter:
       wizardRight: -1905313280
       heartHalf: -1001165040
       master1_17: 677833286
+      magic1: -138271985
       barbFront: 1797487789
       Tile-5: 1537291699
       Tile-17: 822946542
@@ -1553,11 +1553,11 @@ TextureImporter:
       bow1: -1235505452
       bardFront: -1803630102
       Tile-6: -1951626403
-      magic1: -138271985
       rogueBehind: -1822762891
-      master1_30: -888756590
       blankBod: 1099129164
-      master1_16: 1746602183
+      master1_30: -888756590
+      staff: 1986552456
+      barbBehind: 205157159
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
