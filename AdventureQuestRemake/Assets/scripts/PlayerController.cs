@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public enum walkDirection { North, South, West, East }
 public enum charClass { Blank, Wizard, Rogue, Barbarian, Bard }
+public enum weaponTypes { None, WizardStaff }
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
@@ -20,18 +21,22 @@ public class PlayerController : MonoBehaviour
     private Vector2 input;
 
     public float moveSpeed;
+    public float spriteSwitchThreshhold = 0.5f;
+    public float spriteSwitchThreshhold2 = 0.4f;
     private Vector2 moveInput;
     public Rigidbody2D theRB;
     public Animator anim;
     public bool canMove = true;
 
     [Header("combat")]
+    public weaponTypes currentWeapon;
     public Transform weaponSpawnPoint;
     public Transform wEast, wWest, wNorth, wSouth;
     public GameObject sword;
+    public GameObject[] weapons;
     public bool canSwing = true;
+    public GameObject mobileStaff;
 
-    private float offSetAmount = 0.01f;
 
     private void Awake()
     {
@@ -123,6 +128,7 @@ public class PlayerController : MonoBehaviour
         */
     }
 
+
     private void FixedUpdate()
     {
         
@@ -151,27 +157,69 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        //debugtest = theRB.velocity;
+        float horizontalVelocity = Mathf.Abs(theRB.velocity.x);
+        float verticalVelocity = Mathf.Abs(theRB.velocity.y);
 
-        if (theRB.velocity.x > 0.1f)
+        if (horizontalVelocity > verticalVelocity && horizontalVelocity > spriteSwitchThreshhold)
+        {
+            walkdir = theRB.velocity.x > 0 ? walkDirection.East : walkDirection.West;
+        }
+        else if (verticalVelocity > horizontalVelocity && verticalVelocity > spriteSwitchThreshhold)
+        {
+            walkdir = theRB.velocity.y > 0 ? walkDirection.North : walkDirection.South;
+        }
+
+
+        //debugtest = theRB.velocity;
+        /*
+        if (theRB.velocity.x > spriteSwitchThreshhold)
         {
             walkdir = walkDirection.East;
         }
-        else if (theRB.velocity.x < -0.1f)
+        else if (theRB.velocity.x < -spriteSwitchThreshhold)
         {
             walkdir = walkDirection.West;
         }
 
-        if (theRB.velocity.y > 0.1f)
+        if (theRB.velocity.y > spriteSwitchThreshhold)
         {
             walkdir = walkDirection.North;
         }
-        else if (theRB.velocity.y < -0.1f)
+        else if (theRB.velocity.y < -spriteSwitchThreshhold)
         {
             walkdir = walkDirection.South;
         }
 
+        
+
+
+        /*
+        if (theRB.velocity.x > spriteSwitchThreshhold && theRB.velocity.y < spriteSwitchThreshhold2 && theRB.velocity.y > -spriteSwitchThreshhold2)
+        {
+            walkdir = walkDirection.East;
+        }
+        else if (theRB.velocity.x < -spriteSwitchThreshhold && theRB.velocity.y < spriteSwitchThreshhold2 && theRB.velocity.y > -spriteSwitchThreshhold2)
+        {
+            walkdir = walkDirection.West;
+        }
+
+        if (theRB.velocity.y > spriteSwitchThreshhold && theRB.velocity.x < spriteSwitchThreshhold2 && theRB.velocity.x > -spriteSwitchThreshhold2)
+        {
+            walkdir = walkDirection.North;
+        }
+        else if (theRB.velocity.y < -spriteSwitchThreshhold && theRB.velocity.x < spriteSwitchThreshhold2 && theRB.velocity.x > -spriteSwitchThreshhold2)
+        {
+            walkdir = walkDirection.South;
+        }
+        */
+
+
         WalkDirSpriteSwitch();
+
+        if(currentWeapon == weaponTypes.None)
+        {
+            mobileStaff.SetActive(false);
+        }
     }
 
 
@@ -210,7 +258,20 @@ public class PlayerController : MonoBehaviour
                         headSPR.flipX = true;
                         break;
                 }
+
+                switch (currentWeapon)
+                {
+                    case weaponTypes.None:
+                        sword = weapons[0];
+                        break;
+                    case weaponTypes.WizardStaff:
+                        sword = weapons[1];
+                        break;
+                }
+
                 break;
+
+                
             case walkDirection.East:
                 weaponSpawnPoint = wEast;
                 switch (classs)
@@ -243,6 +304,16 @@ public class PlayerController : MonoBehaviour
                         break;
                 }
 
+                switch (currentWeapon)
+                {
+                    case weaponTypes.None:
+                        sword = weapons[0];
+                        break;
+                    case weaponTypes.WizardStaff:
+                        sword = weapons[1];
+                        break;
+                }
+
                 break;
             case walkDirection.North:
                 weaponSpawnPoint = wNorth;
@@ -267,6 +338,16 @@ public class PlayerController : MonoBehaviour
                     case charClass.Bard:
                         headSPR.sprite = heads[10];
                         bodySPR.sprite = body[0];
+                        break;
+                }
+
+                switch (currentWeapon)
+                {
+                    case weaponTypes.None:
+                        sword = weapons[0];
+                        break;
+                    case weaponTypes.WizardStaff:
+                        sword = weapons[2];
                         break;
                 }
 
@@ -297,6 +378,16 @@ public class PlayerController : MonoBehaviour
                         break;
                 }
 
+                switch (currentWeapon)
+                {
+                    case weaponTypes.None:
+                        sword = weapons[0];
+                        break;
+                    case weaponTypes.WizardStaff:
+                        sword = weapons[2];
+                        break;
+                }
+
                 break;
         }
     }
@@ -308,19 +399,26 @@ public class PlayerController : MonoBehaviour
 
     public void Swing(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && currentWeapon != weaponTypes.None)
         {
             if (weaponSpawnPoint != null && canSwing)
             {
-                //var swrd = Instantiate(sword, weaponSpawnPoint);
-                Vector3 poop = new Vector3(weaponSpawnPoint.position.x, weaponSpawnPoint.position.y, weaponSpawnPoint.position.z);
-                var swrd = Instantiate(sword, poop, weaponSpawnPoint.rotation);
 
-                swrd.transform.parent = gameObject.transform;
-                swrd.transform.localScale = weaponSpawnPoint.localScale;
-                canSwing = false;
+                if (canMove)
+                {
+                    //var swrd = Instantiate(sword, weaponSpawnPoint);
+                    Vector3 poop = new Vector3(weaponSpawnPoint.position.x, weaponSpawnPoint.position.y, weaponSpawnPoint.position.z);
+                    var swrd = Instantiate(sword, poop, weaponSpawnPoint.rotation);
 
-                //Debug.Log("swung");
+                    swrd.transform.parent = gameObject.transform;
+                    swrd.transform.localScale = weaponSpawnPoint.localScale;
+                    canSwing = false;
+                    canMove = false;
+
+                    mobileStaff.SetActive(false);
+                    //Debug.Log("swung");
+                }
+
             }
         }
     }

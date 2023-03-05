@@ -44,6 +44,15 @@ public class Weapon1 : MonoBehaviour
     {
         Destroy(gameObject);
         PlayerController.instance.canSwing = true;
+
+        if (!DialogueManager.instance.dialogueIsPlaying)
+        {
+            PlayerController.instance.canMove = true;
+            
+        }
+
+        PlayerController.instance.mobileStaff.SetActive(true);
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)

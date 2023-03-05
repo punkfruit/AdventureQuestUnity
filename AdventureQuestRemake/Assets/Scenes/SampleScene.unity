@@ -191,8 +191,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: dialogue text examples lol
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d9e18675bd0300c42bf3d3ebf5e48af5, type: 2}
-  m_sharedMaterial: {fileID: 3436946685940583769, guid: d9e18675bd0300c42bf3d3ebf5e48af5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e9cda837af020404996d536df839d3ff, type: 2}
+  m_sharedMaterial: {fileID: 6531552711991624561, guid: e9cda837af020404996d536df839d3ff, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -281,14 +281,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10858202}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.221, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: -1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1304035948}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &61044365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1033,8 @@ GameObject:
   m_Component:
   - component: {fileID: 746514492}
   - component: {fileID: 746514493}
+  - component: {fileID: 746514495}
+  - component: {fileID: 746514494}
   m_Layer: 0
   m_Name: sign
   m_TagString: Untagged
@@ -1093,9 +1095,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 809305651
+  m_SortingLayer: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1285118428, guid: aa6897e8f03eaad4ea7ff4e93bf4bbec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1107,6 +1109,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &746514494
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746514491}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.04, y: 0.53}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.55394304, y: 0.043424416}
+    oldSize: {x: 1.1875, y: 1.25}
+    newSize: {x: 1.1875, y: 0.6875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.54, y: 0.06}
+  m_EdgeRadius: 0
+--- !u!114 &746514495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746514491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f7c14124da39b4fa2d31b79128b1d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spr: {fileID: 746514493}
+  yPos: 0
 --- !u!1 &809170133
 GameObject:
   m_ObjectHideFlags: 0
@@ -9013,6 +9055,7 @@ GameObject:
   - component: {fileID: 971877895}
   - component: {fileID: 971877894}
   - component: {fileID: 971877896}
+  - component: {fileID: 971877897}
   m_Layer: 0
   m_Name: Sign
   m_TagString: Untagged
@@ -9066,13 +9109,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: 
-    sentences: []
+    name: Sign
+    sentences:
+    - "whoa im a sign\t"
+    - this is cool
+    - wanna be friends?
   collid: {fileID: 971877894}
   sign: 1
   playerInRange: 0
-  dialogueAnim: {fileID: 0}
+  dialogueAnim: {fileID: 1051455740}
   visulCue: {fileID: 1673931609}
+--- !u!114 &971877897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971877893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: e9f311ee7d3a8e04ca3c9596c67e113e, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c18d8352-ee3d-408c-8bb0-df0369d58fe5
+    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7ad25298-3e0f-4c7b-af53-abbb64f8da9e
+    m_ActionName: Player/Action[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 971877896}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c3069e92-6030-43f9-b2f6-534e05da8973
+    m_ActionName: Player/Dialogue[/Keyboard/e]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1051455739
 GameObject:
   m_ObjectHideFlags: 0
@@ -9173,6 +9273,90 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -110}
   m_SizeDelta: {x: 1030, y: 164}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1058122053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1058122054}
+  - component: {fileID: 1058122055}
+  m_Layer: 0
+  m_Name: staff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1058122054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058122053}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6160002, y: 0.09500003, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1379010357}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1058122055
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058122053}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 809305651
+  m_SortingLayer: 1
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 1108993935, guid: aa6897e8f03eaad4ea7ff4e93bf4bbec, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.5625, y: 1.5625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1194889537
 GameObject:
   m_ObjectHideFlags: 0
@@ -9271,7 +9455,7 @@ GameObject:
   - component: {fileID: 1379010358}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9370,16 +9554,24 @@ MonoBehaviour:
   - {fileID: 1532946545, guid: aa6897e8f03eaad4ea7ff4e93bf4bbec, type: 3}
   - {fileID: 484705099, guid: aa6897e8f03eaad4ea7ff4e93bf4bbec, type: 3}
   moveSpeed: 7
+  spriteSwitchThreshhold: 0.5
+  spriteSwitchThreshhold2: 0.4
   theRB: {fileID: 1379010355}
   anim: {fileID: 1379010353}
   canMove: 1
+  currentWeapon: 1
   weaponSpawnPoint: {fileID: 0}
   wEast: {fileID: 1938057130}
   wWest: {fileID: 871036787}
   wNorth: {fileID: 10858203}
   wSouth: {fileID: 1507985725}
   sword: {fileID: 2496469727435471529, guid: b6d869106b716204ca6bc466c34b9de3, type: 3}
+  weapons:
+  - {fileID: 0}
+  - {fileID: 2496469727435471529, guid: b6d869106b716204ca6bc466c34b9de3, type: 3}
+  - {fileID: 3347813446794057583, guid: 344076ee5123d3646b634b4c4e720c6e, type: 3}
   canSwing: 1
+  mobileStaff: {fileID: 1058122053}
 --- !u!4 &1379010357
 Transform:
   m_ObjectHideFlags: 0
@@ -9393,6 +9585,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1304035948}
+  - {fileID: 1058122054}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9453,6 +9646,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7ad25298-3e0f-4c7b-af53-abbb64f8da9e
     m_ActionName: Player/Action[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c3069e92-6030-43f9-b2f6-534e05da8973
+    m_ActionName: Player/Dialogue[/Keyboard/e,/Mouse/leftButton,/Keyboard/enter,/XInputControllerWindows/buttonWest]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -9481,14 +9678,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507985724}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.07, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1304035948}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1673931609
 GameObject:
   m_ObjectHideFlags: 0
@@ -9662,8 +9859,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: char name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d9e18675bd0300c42bf3d3ebf5e48af5, type: 2}
-  m_sharedMaterial: {fileID: 3436946685940583769, guid: d9e18675bd0300c42bf3d3ebf5e48af5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e9cda837af020404996d536df839d3ff, type: 2}
+  m_sharedMaterial: {fileID: 6531552711991624561, guid: e9cda837af020404996d536df839d3ff, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

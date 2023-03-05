@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -11,10 +12,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public GameObject visulCue;
 
-    public void TriggerDialogue()
-    {
-        DialogueManager.instance.StartDialogue(dialogue);
-    }
+    
 
     private void Start()
     {
@@ -23,6 +21,8 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
+
+        /*
         if (playerInRange)
         {
 
@@ -56,6 +56,23 @@ public class DialogueTrigger : MonoBehaviour
                     visulCue.SetActive(true);
             }
         }
+
+        */
+
+        if (playerInRange)
+        {
+
+            if (DialogueManager.instance.dialogueIsPlaying)
+            {
+                if (visulCue != null)
+                    visulCue.SetActive(false);
+            }
+            else
+            {
+                if (visulCue != null)
+                    visulCue.SetActive(true);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -77,5 +94,37 @@ public class DialogueTrigger : MonoBehaviour
             if (visulCue != null)
                 visulCue.SetActive(false);
         }
+    }
+
+
+    public void TriggerDialogue(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (playerInRange)
+            {
+
+
+                
+                    if (dialogueAnim.GetBool("isOpen") == false)
+                    {
+
+                        DialogueManager.instance.StartDialogue(dialogue);
+
+
+                    }
+                    else
+                    {
+                        DialogueManager.instance.DisplayNextSentence();
+
+
+                    }
+                
+
+
+            }
+        }
+
+
     }
 }
