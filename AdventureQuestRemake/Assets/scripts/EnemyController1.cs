@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 public enum walkDirectionEnemy1 { North, South, East, West }
-public enum spriteDirectionEnemy { North, South, East, West }
+public enum movementType { wander }
 public enum enemyType { slime }
 public class EnemyController1 : MonoBehaviour
 {
@@ -30,7 +30,9 @@ public class EnemyController1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+
+        WalkDirSpriteSwitch();
     }
 
     public void WalkDirSpriteSwitch()
@@ -50,6 +52,7 @@ public class EnemyController1 : MonoBehaviour
                 {
                     case enemyType.slime:
                         spr.sprite = body[1];
+                        spr.flipX = true; //might add if statement to see if this is a slime
                         break;
                 }
                 break;
@@ -66,6 +69,7 @@ public class EnemyController1 : MonoBehaviour
                 {
                     case enemyType.slime:
                         spr.sprite = body[3];
+                        spr.flipX = false; //might add if statement to see if this is a slime
                         break;
                 }
                 break;

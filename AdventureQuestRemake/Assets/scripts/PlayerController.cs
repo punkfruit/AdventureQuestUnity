@@ -35,7 +35,12 @@ public class PlayerController : MonoBehaviour
     public GameObject sword;
     public GameObject[] weapons;
     public bool canSwing = true;
+
+    [Header("Mobile Weapon")] //the 'fake' weapon model that hovers around the player!
     public GameObject mobileStaff;
+    public SpriteRenderer mobileStaffSPR;
+    public Transform mEast, mWest, mNorth, mSouth;
+    public Sprite[] mobileStaffSprites;
 
 
     private void Awake()
@@ -229,6 +234,10 @@ public class PlayerController : MonoBehaviour
         {
             case walkDirection.West:
                 weaponSpawnPoint = wWest;
+                mobileStaff.transform.position = mWest.position;
+                mobileStaff.transform.rotation = mWest.rotation;
+                mobileStaff.transform.localScale = mWest.localScale;
+                mobileStaffSPR.sortingOrder = 5;
                 switch (classs)
                 {
                     case charClass.Blank:
@@ -274,6 +283,10 @@ public class PlayerController : MonoBehaviour
                 
             case walkDirection.East:
                 weaponSpawnPoint = wEast;
+                mobileStaff.transform.position = mEast.position;
+                mobileStaff.transform.rotation = mEast.rotation;
+                mobileStaff.transform.localScale = mEast.localScale;
+                mobileStaffSPR.sortingOrder = 5;
                 switch (classs)
                 {
                     case charClass.Blank:
@@ -317,6 +330,10 @@ public class PlayerController : MonoBehaviour
                 break;
             case walkDirection.North:
                 weaponSpawnPoint = wNorth;
+                mobileStaff.transform.position = mNorth.position;
+                mobileStaff.transform.rotation = mNorth.rotation;
+                mobileStaff.transform.localScale = mNorth.localScale;
+                mobileStaffSPR.sortingOrder = -5;
                 switch (classs)
                 {
                     case charClass.Blank:
@@ -354,6 +371,10 @@ public class PlayerController : MonoBehaviour
                 break;
             case walkDirection.South:
                 weaponSpawnPoint = wSouth;
+                mobileStaff.transform.position = mSouth.position;
+                mobileStaff.transform.rotation = mSouth.rotation;
+                mobileStaff.transform.localScale = mSouth.localScale;
+                mobileStaffSPR.sortingOrder = 5;
                 switch (classs)
                 {
                     case charClass.Blank:
