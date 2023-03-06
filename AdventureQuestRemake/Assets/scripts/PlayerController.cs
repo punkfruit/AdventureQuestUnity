@@ -42,6 +42,10 @@ public class PlayerController : MonoBehaviour
     public Transform mEast, mWest, mNorth, mSouth;
     public Sprite[] mobileStaffSprites;
 
+    [Header("Health")]
+    public int health;
+    public int maxHealth;
+
 
     private void Awake()
     {
@@ -61,6 +65,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this);
+
+        HealthManager.instance.HeartUpdate(health);
     }
 
     // Update is called once per frame
@@ -441,6 +447,17 @@ public class PlayerController : MonoBehaviour
                 }
 
             }
+        }
+    }
+
+
+    public void TakeDamage(int dam)
+    {
+        health -= dam;
+        HealthManager.instance.HeartUpdate(health);
+        if(health <= 0)
+        {
+            //die
         }
     }
 }

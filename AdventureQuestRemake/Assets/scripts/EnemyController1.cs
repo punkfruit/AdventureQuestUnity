@@ -20,6 +20,11 @@ public class EnemyController1 : MonoBehaviour
     public Sprite[] body;
     public walkDirectionEnemy1 walkDir;
     public enemyType enType;
+    public GameObject deathAnim;
+    public bool hitPlayer, playerInRange;
+    public int contactDamage;
+    public float contactDamageTimer;
+    private float count1;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +35,26 @@ public class EnemyController1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(count1 > 0)
+        {
+            count1 -= Time.deltaTime;
+            hitPlayer = true;
+        }
+        else
+        {
+            hitPlayer = false;
+            count1 = contactDamageTimer;
+        }
 
         WalkDirSpriteSwitch();
+
+        if (playerInRange)
+        {
+            if (!hitPlayer)
+            {
+                PlayerController.instance.TakeDamage(contactDamage);
+            }
+        }
     }
 
     public void WalkDirSpriteSwitch()
@@ -83,6 +105,25 @@ public class EnemyController1 : MonoBehaviour
         if(health <= 0)
         {
             //die
+            Instantiate(deathAnim, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            playerInRange = false;
+        }
+    }
+
 }
