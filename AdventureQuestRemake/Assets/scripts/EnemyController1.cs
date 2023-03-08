@@ -21,6 +21,7 @@ public class EnemyController1 : MonoBehaviour
     public walkDirectionEnemy1 walkDir;
     public enemyType enType;
     public GameObject deathAnim;
+    public Transform deathAnimSpawn;
     public bool hitPlayer, playerInRange;
     public int contactDamage;
     public float contactDamageTimer;
@@ -35,21 +36,23 @@ public class EnemyController1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(count1 > 0)
-        {
-            count1 -= Time.deltaTime;
-            hitPlayer = true;
-        }
-        else
-        {
-            hitPlayer = false;
-            count1 = contactDamageTimer;
-        }
+        
 
         WalkDirSpriteSwitch();
 
         if (playerInRange)
         {
+            if (count1 > 0)
+            {
+                count1 -= Time.deltaTime;
+                hitPlayer = true;
+            }
+            else
+            {
+                hitPlayer = false;
+                count1 = contactDamageTimer;
+            }
+
             if (!hitPlayer)
             {
                 PlayerController.instance.TakeDamage(contactDamage);
@@ -105,7 +108,7 @@ public class EnemyController1 : MonoBehaviour
         if(health <= 0)
         {
             //die
-            Instantiate(deathAnim, transform.position, transform.rotation);
+            Instantiate(deathAnim, deathAnimSpawn.transform.position, deathAnimSpawn.transform.rotation);
             Destroy(gameObject);
         }
     }
@@ -123,6 +126,8 @@ public class EnemyController1 : MonoBehaviour
         if (other.tag == "Player")
         {
             playerInRange = false;
+            count1 = 0;
+            //Debug.Log("playerLeft");
         }
     }
 
