@@ -1,47 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public enum imageType { sprite, tilemap }
+public enum ImageType { Sprite, Tilemap }
+
 public class SortingLayerChanger : MonoBehaviour
 {
-    public imageType image_type = imageType.sprite;
-    public SpriteRenderer spr;
-    public TilemapRenderer tl;
+    public ImageType imageType = ImageType.Sprite;
+    public SpriteRenderer spriteRenderer;
+    public TilemapRenderer tilemapRenderer;
     public float yPos;
-    public int above = 10, below = -10;
-
-    public Transform target; //the transform of the object thats being compared against the player.
+    public int above = 10;
+    public int below = -10;
+    public Transform target;
 
     private void Update()
     {
         yPos = PlayerController.instance.transform.position.y;
 
-
-        if(image_type == imageType.sprite)
+        if (imageType == ImageType.Sprite)
         {
-            if (yPos >= target.transform.position.y)
+            if (yPos >= target.position.y)
             {
-                spr.sortingOrder = above;
+                spriteRenderer.sortingOrder = above;
             }
             else
             {
-                spr.sortingOrder = below;
+                spriteRenderer.sortingOrder = below;
             }
         }
-       
-        if(image_type == imageType.tilemap)
+        else if (imageType == ImageType.Tilemap)
         {
-            if (yPos >= target.transform.position.y)
+            if (yPos >= target.position.y)
             {
-                tl.sortingOrder = above;
+                tilemapRenderer.sortingOrder = above;
             }
             else
             {
-                tl.sortingOrder = below;
+                tilemapRenderer.sortingOrder = below;
             }
         }
-       
     }
 }
