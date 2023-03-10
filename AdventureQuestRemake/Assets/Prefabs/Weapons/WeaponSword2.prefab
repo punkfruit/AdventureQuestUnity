@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2496469727435471529
+--- !u!1 &6474511077013811410
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2496469727435471532}
-  - component: {fileID: 2496469727435471531}
-  - component: {fileID: 2496469727435471530}
-  - component: {fileID: 6367006189956681742}
-  - component: {fileID: 2519920410344343066}
+  - component: {fileID: 6474511077013811415}
+  - component: {fileID: 6474511077013811408}
+  - component: {fileID: 6474511077013811409}
+  - component: {fileID: 2531882936398453365}
+  - component: {fileID: 6451307767845555297}
   m_Layer: 0
-  m_Name: WeaponStaff1
+  m_Name: WeaponSword2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2496469727435471532
+--- !u!4 &6474511077013811415
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2496469727435471529}
+  m_GameObject: {fileID: 6474511077013811410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -14.615, y: 2.793, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2496469727435471531
+--- !u!212 &6474511077013811408
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2496469727435471529}
+  m_GameObject: {fileID: 6474511077013811410}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 809305651
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1804151380, guid: d32e405c05ca7a3408cc995e438c277e, type: 3}
+  m_Sprite: {fileID: 1333989798, guid: efac2edbfb14a9940a83e570d0f2fe31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,17 +87,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2496469727435471530
+--- !u!95 &6474511077013811409
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2496469727435471529}
+  m_GameObject: {fileID: 6474511077013811410}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c5f4ce6cb2fb4e54fbbf73b3369dc15c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 033790ccab652cf41876260a14eac0ad, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -107,29 +107,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &6367006189956681742
+--- !u!58 &2531882936398453365
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2496469727435471529}
+  m_GameObject: {fileID: 6474511077013811410}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.85, y: -0.06}
+  m_Offset: {x: 1.02, y: -0.14}
   serializedVersion: 2
-  m_Radius: 0.69
---- !u!114 &2519920410344343066
+  m_Radius: 1.04
+--- !u!114 &6451307767845555297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2496469727435471529}
+  m_GameObject: {fileID: 6474511077013811410}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 762ed0a481fb5f94cb26a230f8f96088, type: 3}
@@ -138,4 +138,5 @@ MonoBehaviour:
   damage: 10
   weapon: 1
   hit: 0
-  spr: {fileID: 2496469727435471531}
+  spr: {fileID: 6474511077013811408}
+  anim: {fileID: 6474511077013811409}

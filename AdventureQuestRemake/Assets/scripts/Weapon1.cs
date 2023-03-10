@@ -8,6 +8,7 @@ public class Weapon1 : MonoBehaviour
     public bool weapon = false;
     public bool hit = false;
     public SpriteRenderer spr;
+    public Animator anim;
 
 
     // Start is called before the first frame update
@@ -67,6 +68,11 @@ public class Weapon1 : MonoBehaviour
                     hit = true;
                     Debug.Log("hit");
                 }
+            }
+
+            if(other.tag == "Wall")
+            {
+                anim.SetTrigger("hitWall");
             }
         }
     }

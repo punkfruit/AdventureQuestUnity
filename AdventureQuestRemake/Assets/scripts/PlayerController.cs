@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public enum walkDirection { North, South, West, East }
 public enum charClass { Blank, Wizard, Rogue, Barbarian, Bard }
-public enum weaponTypes { None, WizardStaff }
+public enum weaponTypes { None, WizardStaff, Sword }
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     [Header("Mobile Weapon")] //the 'fake' weapon model that hovers around the player!
     public GameObject mobileStaff;
     public SpriteRenderer mobileStaffSPR;
-    public Transform mEast, mWest, mNorth, mSouth;
+    public Transform[] wizStaff, swordT;
     public Sprite[] mobileStaffSprites;
 
     [Header("Health")]
@@ -240,10 +240,8 @@ public class PlayerController : MonoBehaviour
         {
             case walkDirection.West:
                 weaponSpawnPoint = wWest;
-                mobileStaff.transform.position = mWest.position;
-                mobileStaff.transform.rotation = mWest.rotation;
-                mobileStaff.transform.localScale = mWest.localScale;
-                mobileStaffSPR.sortingOrder = 5;
+                
+                
                 switch (classs)
                 {
                     case charClass.Blank:
@@ -281,6 +279,19 @@ public class PlayerController : MonoBehaviour
                         break;
                     case weaponTypes.WizardStaff:
                         sword = weapons[1];
+                        mobileStaffSPR.sprite = mobileStaffSprites[1];
+                        mobileStaff.transform.position = wizStaff[0].position;
+                        mobileStaff.transform.rotation = wizStaff[0].rotation;
+                        mobileStaff.transform.localScale = wizStaff[0].localScale;
+                        mobileStaffSPR.sortingOrder = 5;
+                        break;
+                    case weaponTypes.Sword:
+                        sword = weapons[3];
+                        mobileStaffSPR.sprite = mobileStaffSprites[2];
+                        mobileStaff.transform.position = swordT[0].position;
+                        mobileStaff.transform.rotation = swordT[0].rotation;
+                        mobileStaff.transform.localScale = swordT[0].localScale;
+                        mobileStaffSPR.sortingOrder = 5;
                         break;
                 }
 
@@ -289,10 +300,7 @@ public class PlayerController : MonoBehaviour
                 
             case walkDirection.East:
                 weaponSpawnPoint = wEast;
-                mobileStaff.transform.position = mEast.position;
-                mobileStaff.transform.rotation = mEast.rotation;
-                mobileStaff.transform.localScale = mEast.localScale;
-                mobileStaffSPR.sortingOrder = 5;
+                
                 switch (classs)
                 {
                     case charClass.Blank:
@@ -330,16 +338,25 @@ public class PlayerController : MonoBehaviour
                         break;
                     case weaponTypes.WizardStaff:
                         sword = weapons[1];
+                        mobileStaffSPR.sprite = mobileStaffSprites[1];
+                        mobileStaff.transform.position = wizStaff[1].position;
+                        mobileStaff.transform.rotation = wizStaff[1].rotation;
+                        mobileStaff.transform.localScale = wizStaff[1].localScale;
+                        mobileStaffSPR.sortingOrder = 5;
+                        break;
+                    case weaponTypes.Sword:
+                        sword = weapons[3];
+                        mobileStaffSPR.sprite = mobileStaffSprites[2];
+                        mobileStaff.transform.position = swordT[1].position;
+                        mobileStaff.transform.rotation = swordT[1].rotation;
+                        mobileStaff.transform.localScale = swordT[1].localScale;
+                        mobileStaffSPR.sortingOrder = 5;
                         break;
                 }
 
                 break;
             case walkDirection.North:
                 weaponSpawnPoint = wNorth;
-                mobileStaff.transform.position = mNorth.position;
-                mobileStaff.transform.rotation = mNorth.rotation;
-                mobileStaff.transform.localScale = mNorth.localScale;
-                mobileStaffSPR.sortingOrder = -5;
                 switch (classs)
                 {
                     case charClass.Blank:
@@ -371,16 +388,25 @@ public class PlayerController : MonoBehaviour
                         break;
                     case weaponTypes.WizardStaff:
                         sword = weapons[2];
+                        mobileStaffSPR.sprite = mobileStaffSprites[1];
+                        mobileStaff.transform.position = wizStaff[2].position;
+                        mobileStaff.transform.rotation = wizStaff[2].rotation;
+                        mobileStaff.transform.localScale = wizStaff[2].localScale;
+                        mobileStaffSPR.sortingOrder = -5;
+                        break;
+                    case weaponTypes.Sword:
+                        sword = weapons[4];
+                        mobileStaffSPR.sprite = mobileStaffSprites[2];
+                        mobileStaff.transform.position = swordT[2].position;
+                        mobileStaff.transform.rotation = swordT[2].rotation;
+                        mobileStaff.transform.localScale = swordT[2].localScale;
+                        mobileStaffSPR.sortingOrder = -5;
                         break;
                 }
 
                 break;
             case walkDirection.South:
                 weaponSpawnPoint = wSouth;
-                mobileStaff.transform.position = mSouth.position;
-                mobileStaff.transform.rotation = mSouth.rotation;
-                mobileStaff.transform.localScale = mSouth.localScale;
-                mobileStaffSPR.sortingOrder = 5;
                 switch (classs)
                 {
                     case charClass.Blank:
@@ -412,6 +438,19 @@ public class PlayerController : MonoBehaviour
                         break;
                     case weaponTypes.WizardStaff:
                         sword = weapons[2];
+                        mobileStaffSPR.sprite = mobileStaffSprites[1];
+                        mobileStaff.transform.position = wizStaff[3].position;
+                        mobileStaff.transform.rotation = wizStaff[3].rotation;
+                        mobileStaff.transform.localScale = wizStaff[3].localScale;
+                        mobileStaffSPR.sortingOrder = 5;
+                        break;
+                    case weaponTypes.Sword:
+                        sword = weapons[4];
+                        mobileStaffSPR.sprite = mobileStaffSprites[2];
+                        mobileStaff.transform.position = swordT[3].position;
+                        mobileStaff.transform.rotation = swordT[3].rotation;
+                        mobileStaff.transform.localScale = swordT[3].localScale;
+                        mobileStaffSPR.sortingOrder = 7;
                         break;
                 }
 
