@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public enum walkDirection { North, South, West, East }
 public enum charClass { Blank, Wizard, Rogue, Barbarian, Bard }
-public enum weaponTypes { None, WizardStaff, Sword }
+public enum weaponTypes { None, WizardStaff, Sword } //ill add more later
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
@@ -23,16 +23,15 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float spriteSwitchThreshhold = 0.5f;
     public float spriteSwitchThreshhold2 = 0.4f;
-    private Vector2 moveInput;
     public Rigidbody2D theRB;
     public Animator anim;
     public bool canMove = true;
 
     [Header("combat")]
     public weaponTypes currentWeapon;
-    public Transform weaponSpawnPoint;
-    public Transform wEast, wWest, wNorth, wSouth;
-    public GameObject sword;
+    public Transform weaponSpawnPoint; //where the weapon will spawn when user attacks
+    public Transform wEast, wWest, wNorth, wSouth; //these feed into weaponSpawnPoint
+    public GameObject sword; //the actual weapon, its called sword but it can be any of the ones defined in the enum weaponTypes
     public GameObject[] weapons;
     public bool canSwing = true;
 
@@ -69,75 +68,6 @@ public class PlayerController : MonoBehaviour
         HealthManager.instance.HeartUpdate(health);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        /*
-        if (canMove)
-        {
-            moveInput.x = Input.GetAxisRaw("Horizontal");
-            moveInput.y = Input.GetAxisRaw("Vertical");
-
-            moveInput.Normalize();
-
-            theRB.velocity = moveInput * moveSpeed;
-
-
-            if (moveInput != Vector2.zero)
-            {
-                anim.SetBool("isMoving", true);
-            }
-            else
-            {
-                anim.SetBool("isMoving", false);
-            }
-
-
-            if (Input.GetButtonDown("Swing"))
-            {
-                if (weaponSpawnPoint != null && canSwing)
-                {
-                    var swrd = Instantiate(sword, weaponSpawnPoint);
-                    swrd.transform.parent = gameObject.transform;
-                    canSwing = false;
-                }
-
-            }
-
-        }
-        else
-        {
-            theRB.velocity = Vector2.zero;
-            anim.SetBool("isMoving", false);
-        }
-
-
-        //debugtest = theRB.velocity;
-
-        if (theRB.velocity.x > 0.1f)
-        {
-            walkdir = walkDirection.East;
-        }
-        else if (theRB.velocity.x < -0.1f)
-        {
-            walkdir = walkDirection.West;
-        }
-
-        if (theRB.velocity.y > 0.1f)
-        {
-            walkdir = walkDirection.North;
-        }
-        else if (theRB.velocity.y < -0.1f)
-        {
-            walkdir = walkDirection.South;
-        }
-
-        WalkDirSpriteSwitch();
-
-
-        */
-    }
 
 
     private void FixedUpdate()
@@ -234,7 +164,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void WalkDirSpriteSwitch()
+    public void WalkDirSpriteSwitch() //this will change many of the paramaters depending on which way the player is facing, what their class is, and what weapon theyre using. im doing it this way cause its important for the player to change things on the fly, like the current class
     {
         switch (walkdir)
         {
@@ -496,7 +426,7 @@ public class PlayerController : MonoBehaviour
         HealthManager.instance.HeartUpdate(health);
         if(health <= 0)
         {
-            //die
+            //die. ill add this later
         }
     }
 }

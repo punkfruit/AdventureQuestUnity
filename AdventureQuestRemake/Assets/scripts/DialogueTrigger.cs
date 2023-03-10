@@ -22,42 +22,6 @@ public class DialogueTrigger : MonoBehaviour
     private void Update()
     {
 
-        /*
-        if (playerInRange)
-        {
-
-
-            if (Input.GetButtonDown("Action"))
-            {
-                if (dialogueAnim.GetBool("isOpen") == false)
-                {
-                    TriggerDialogue();
-
-
-
-                }
-                else
-                {
-                    DialogueManager.instance.DisplayNextSentence();
-
-
-                }
-            }
-
-
-            if (DialogueManager.instance.dialogueIsPlaying)
-            {
-                if (visulCue != null)
-                    visulCue.SetActive(false);
-            }
-            else
-            {
-                if (visulCue != null)
-                    visulCue.SetActive(true);
-            }
-        }
-
-        */
 
         if (playerInRange)
         {
