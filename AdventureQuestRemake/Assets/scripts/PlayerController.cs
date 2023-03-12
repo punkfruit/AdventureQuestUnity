@@ -111,49 +111,6 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        //debugtest = theRB.velocity;
-        /*
-        if (theRB.velocity.x > spriteSwitchThreshhold)
-        {
-            walkdir = walkDirection.East;
-        }
-        else if (theRB.velocity.x < -spriteSwitchThreshhold)
-        {
-            walkdir = walkDirection.West;
-        }
-
-        if (theRB.velocity.y > spriteSwitchThreshhold)
-        {
-            walkdir = walkDirection.North;
-        }
-        else if (theRB.velocity.y < -spriteSwitchThreshhold)
-        {
-            walkdir = walkDirection.South;
-        }
-
-        
-
-
-        /*
-        if (theRB.velocity.x > spriteSwitchThreshhold && theRB.velocity.y < spriteSwitchThreshhold2 && theRB.velocity.y > -spriteSwitchThreshhold2)
-        {
-            walkdir = walkDirection.East;
-        }
-        else if (theRB.velocity.x < -spriteSwitchThreshhold && theRB.velocity.y < spriteSwitchThreshhold2 && theRB.velocity.y > -spriteSwitchThreshhold2)
-        {
-            walkdir = walkDirection.West;
-        }
-
-        if (theRB.velocity.y > spriteSwitchThreshhold && theRB.velocity.x < spriteSwitchThreshhold2 && theRB.velocity.x > -spriteSwitchThreshhold2)
-        {
-            walkdir = walkDirection.North;
-        }
-        else if (theRB.velocity.y < -spriteSwitchThreshhold && theRB.velocity.x < spriteSwitchThreshhold2 && theRB.velocity.x > -spriteSwitchThreshhold2)
-        {
-            walkdir = walkDirection.South;
-        }
-        */
-
 
         WalkDirSpriteSwitch();
 
