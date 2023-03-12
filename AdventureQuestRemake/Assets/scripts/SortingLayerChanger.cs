@@ -13,7 +13,7 @@ public class SortingLayerChanger : MonoBehaviour
     public int below = -10;
     public Transform target;
 
-    private void Update()
+    private void LateUpdate()
     {
         yPos = PlayerController.instance.transform.position.y;
 
