@@ -350,6 +350,8 @@ public class PlayerController : MonoBehaviour
         input = context.ReadValue<Vector2>();
     }
 
+  
+
     public void Swing(InputAction.CallbackContext context)
     {
         if (context.performed && currentWeapon != weaponTypes.None)

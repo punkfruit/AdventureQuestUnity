@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum itemType { greenPotion, redPotion }
-public class InventoryItem 
+
+[CreateAssetMenu(fileName = "InventoryItem", menuName = "ScriptableObjects/InventoryItem")]
+public class InventoryItem : ScriptableObject
 {
-    public string name = "Item";
-    public int icon;
+    public string itemName = "Item";
+    public string itemDescription = "Description";
+    public Sprite icon;
+    public itemType type = itemType.greenPotion;
 }
