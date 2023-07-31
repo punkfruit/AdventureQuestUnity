@@ -68,8 +68,8 @@ public class DialogueTrigger : MonoBehaviour
             if (playerInRange)
             {
 
-
-                
+                if (!InventoryManager.instance.inventoryOpen)
+                {
                     if (dialogueAnim.GetBool("isOpen") == false)
                     {
 
@@ -83,7 +83,10 @@ public class DialogueTrigger : MonoBehaviour
 
 
                     }
-                
+
+                }
+
+
 
 
             }

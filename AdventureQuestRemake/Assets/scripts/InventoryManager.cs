@@ -49,20 +49,24 @@ public class InventoryManager : MonoBehaviour
     {
         if (context.performed)
         {
-            if (inventoryOpen)
+            if (!DialogueManager.instance.dialogueIsPlaying)
             {
-                inventoryOpen = false;
-                inventoryScreen.SetActive(false);
-                PlayerController.instance.canMove = true;
-                PlayerController.instance.canSwing = true;
+                if (inventoryOpen)
+                {
+                    inventoryOpen = false;
+                    inventoryScreen.SetActive(false);
+                    PlayerController.instance.canMove = true;
+                    PlayerController.instance.canSwing = true;
+                }
+                else
+                {
+                    inventoryOpen = true;
+                    inventoryScreen.SetActive(true);
+                    PlayerController.instance.canMove = false;
+                    PlayerController.instance.canSwing = false;
+                }
             }
-            else
-            {
-                inventoryOpen = true;
-                inventoryScreen.SetActive(true);
-                PlayerController.instance.canMove = false;
-                PlayerController.instance.canSwing = false;
-            }
+           
         }
     }
 

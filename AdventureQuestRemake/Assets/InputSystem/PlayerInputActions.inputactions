@@ -229,6 +229,45 @@
                     "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6e2b648e-5baa-41fd-be64-d3fe1faf9d34",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "InventoryMenu",
+            "id": "af14bb21-33ce-41cb-a7ab-b37a1eedbbbe",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "efc92f62-0720-4c63-bbcb-c1df1189e3de",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "60773cb4-10d3-4947-8516-b7bde5cb712f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
