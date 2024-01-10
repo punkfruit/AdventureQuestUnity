@@ -5,9 +5,23 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
-    public string name;
 
+    public Sentence[] sentences;
+}
+
+[System.Serializable]
+public class Sentence
+{
+    public string characterName;
+    //public Sprite characterIcon;
     [TextArea(3, 10)]
-    public string[] sentences;
+    public string text;
+
+    public Sentence(string name, string sentence)
+    {
+        characterName = name;
+        //characterIcon = icon;
+        text = sentence;
+    }
 }
 

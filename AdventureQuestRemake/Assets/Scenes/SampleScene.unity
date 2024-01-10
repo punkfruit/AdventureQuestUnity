@@ -36692,11 +36692,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Sign
     sentences:
-    - "whoa im a sign\t"
-    - this is cool
-    - wanna be friends?
+    - characterName: Sign
+      text: hey im a sign
+    - characterName: Sign
+      text: Hows it going?
+    - characterName: Sign
+      text: ok bye
   collid: {fileID: 971877894}
   sign: 1
   playerInRange: 0
@@ -36755,6 +36757,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b01e3099-cc36-4b5a-9666-805b5f21002d
     m_ActionName: Player/Inventory[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: efc92f62-0720-4c63-bbcb-c1df1189e3de
+    m_ActionName: InventoryMenu/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
