@@ -68,24 +68,20 @@ public class DialogueTrigger : MonoBehaviour
             if (playerInRange)
             {
 
-                if (!InventoryManager.instance.inventoryOpen)
+                
+                if (dialogueAnim.GetBool("isOpen") == false)
                 {
-                    if (dialogueAnim.GetBool("isOpen") == false)
-                    {
 
-                        DialogueManager.instance.StartDialogue(dialogue);
+                    DialogueManager.instance.StartDialogue(dialogue);
 
-
-                    }
-                    else
-                    {
-                        DialogueManager.instance.DisplayNextSentence();
-
-
-                    }
 
                 }
+                else
+                {
+                    DialogueManager.instance.DisplayNextSentence();
 
+
+                }
 
 
 

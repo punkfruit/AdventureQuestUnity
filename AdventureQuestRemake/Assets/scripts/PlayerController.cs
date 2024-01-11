@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 
@@ -345,37 +346,44 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /*
     public void Move(InputAction.CallbackContext context)
     {
         input = context.ReadValue<Vector2>();
     }
+    */
 
+    public void OnMove(InputValue movementValue)
+    {
+        
+         input = movementValue.Get<Vector2>();
+        
+    }
   
 
-    public void Swing(InputAction.CallbackContext context)
+    public void OnAction(InputValue actionValue)
     {
-        if (context.performed && currentWeapon != weaponTypes.None)
+       
+        if (weaponSpawnPoint != null && canSwing)
         {
-            if (weaponSpawnPoint != null && canSwing)
+
+            if (canMove)
             {
+                //var swrd = Instantiate(sword, weaponSpawnPoint);
+                Vector3 poop = new Vector3(weaponSpawnPoint.position.x, weaponSpawnPoint.position.y, weaponSpawnPoint.position.z);
+                var swrd = Instantiate(sword, poop, weaponSpawnPoint.rotation);
 
-                if (canMove)
-                {
-                    //var swrd = Instantiate(sword, weaponSpawnPoint);
-                    Vector3 poop = new Vector3(weaponSpawnPoint.position.x, weaponSpawnPoint.position.y, weaponSpawnPoint.position.z);
-                    var swrd = Instantiate(sword, poop, weaponSpawnPoint.rotation);
+                swrd.transform.parent = gameObject.transform;
+                swrd.transform.localScale = weaponSpawnPoint.localScale;
+                canSwing = false;
+                canMove = false;
 
-                    swrd.transform.parent = gameObject.transform;
-                    swrd.transform.localScale = weaponSpawnPoint.localScale;
-                    canSwing = false;
-                    canMove = false;
-
-                    mobileStaff.SetActive(false);
-                    //Debug.Log("swung");
-                }
-
+                mobileStaff.SetActive(false);
+                //Debug.Log("swung");
             }
+
         }
+        
     }
 
 
