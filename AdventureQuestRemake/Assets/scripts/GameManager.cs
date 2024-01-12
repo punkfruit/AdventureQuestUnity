@@ -1,3 +1,4 @@
+using MoreMountains.Tools;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +23,8 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        
+        MMEventManager.TriggerEvent(new MMGameEvent("Load"));
+
     }
 
     // Update is called once per frame
