@@ -46,7 +46,7 @@ public class Weapon1 : MonoBehaviour
         Destroy(gameObject);
         PlayerController.instance.canSwing = true;
 
-        if (!DialogueManager.instance.dialogueIsPlaying)
+        if (!DialogueManager.instance.dialogueIsPlaying && !PlayerController.instance.inventoryInputManager.InventoryIsOpen)
         {
             PlayerController.instance.canMove = true;
             

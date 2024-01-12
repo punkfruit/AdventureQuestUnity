@@ -16,7 +16,7 @@ MonoBehaviour:
   TargetInventoryName: MainInventory
   ForceSlotIndex: 0
   TargetIndex: 0
-  Usable: 0
+  Usable: 1
   Consumable: 1
   ConsumeQuantity: 1
   Equippable: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
   ShortDescription: sdf
   Description: sdfsdf
   Icon: {fileID: -582146629, guid: aa6897e8f03eaad4ea7ff4e93bf4bbec, type: 3}
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 4979733958412431546, guid: 5a7bc3cb4c41d954c8c0a643635b8b63, type: 3}
   ForcePrefabDropQuantity: 0
   PrefabDropQuantity: 1
   DropProperties:
@@ -81,7 +81,7 @@ MonoBehaviour:
     MaximumRotation: {x: 0, y: 0, z: 0}
     MinimumScale: {x: 1, y: 1, z: 1}
     MaximumScale: {x: 1, y: 1, z: 1}
-  MaximumStack: 1
+  MaximumStack: 5
   ItemClass: 0
   TargetEquipmentInventoryName: 
   EquippedSound: {fileID: 0}

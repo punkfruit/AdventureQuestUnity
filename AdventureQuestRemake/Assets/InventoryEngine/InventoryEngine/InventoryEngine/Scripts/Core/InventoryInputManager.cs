@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 namespace MoreMountains.InventoryEngine
 {
+
 	/// <summary>
 	/// Example of how you can call an inventory from your game. 
 	/// I suggest having your Input and GUI manager classes handle that though.
@@ -245,11 +246,15 @@ namespace MoreMountains.InventoryEngine
 		protected bool _dropKeyPressed;
 		protected bool _hotbarInputPressed = false;
 
+		public bool canOpenInventory = true;
+
 		/// <summary>
 		/// On start, we grab references and prepare our hotbar list
 		/// </summary>
 		protected virtual void Start()
 		{
+
+
 			_isDropButtonNotNull = DropButton != null;
 			_isMoveButtonNotNull = MoveButton != null;
 			_isUnEquipButtonNotNull = UnEquipButton != null;
@@ -380,6 +385,7 @@ namespace MoreMountains.InventoryEngine
 		/// </summary>
 		public virtual void ToggleInventory()
 		{
+
 			if (InventoryIsOpen)
 			{
 				CloseInventory();
@@ -395,6 +401,11 @@ namespace MoreMountains.InventoryEngine
 		/// </summary>
 		public virtual void OpenInventory()
 		{
+			if (!canOpenInventory)
+			{
+				return; // Exit the method if dialogue is playing
+			}
+
 			if (CloseList.Count > 0)
 			{
 				foreach (string playerID in CloseList)

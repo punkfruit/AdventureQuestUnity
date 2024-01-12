@@ -1,3 +1,4 @@
+using MoreMountains.InventoryEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,14 +11,35 @@ public class DialogueTrigger : MonoBehaviour
     public bool sign, playerInRange;
     public Animator dialogueAnim;
 
+    public PlayerInput playerInput;
+    private InventoryInputManager inventoryInputManager;
+
     public GameObject visulCue;
 
     
 
     private void Start()
     {
-        //dialogueAnim = 
+        playerInput = PlayerController.instance.playerInput;
+        if (playerInput != null)
+        {
+            playerInput.actions["Dialogue"].performed += OnDialoguePerformed;
+        }
+        // Find the InventoryInputManager instance
+        inventoryInputManager = FindObjectOfType<InventoryInputManager>();
     }
+
+    
+
+    private void OnDialoguePerformed(InputAction.CallbackContext context)
+    {
+        // Check if the inventory is not open before triggering dialogue
+        if (inventoryInputManager != null && !inventoryInputManager.InventoryIsOpen)
+        {
+            TriggerDialogue();
+        }
+    }
+
 
     private void Update()
     {
@@ -61,32 +83,31 @@ public class DialogueTrigger : MonoBehaviour
     }
 
 
-    public void TriggerDialogue(InputAction.CallbackContext context)
+    public void TriggerDialogue()
     {
-        if (context.performed)
+        
+        if (playerInRange)
         {
-            if (playerInRange)
-            {
 
                 
-                if (dialogueAnim.GetBool("isOpen") == false)
-                {
+            if (dialogueAnim.GetBool("isOpen") == false)
+            {
 
-                    DialogueManager.instance.StartDialogue(dialogue);
-
-
-                }
-                else
-                {
-                    DialogueManager.instance.DisplayNextSentence();
-
-
-                }
-
+                DialogueManager.instance.StartDialogue(dialogue);
 
 
             }
+            else
+            {
+                DialogueManager.instance.DisplayNextSentence();
+
+
+            }
+
+
+
         }
+        
 
 
     }

@@ -1,3 +1,5 @@
+using MoreMountains.InventoryEngine;
+using MoreMountains.Tools;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +10,7 @@ using UnityEngine.InputSystem;
 public enum walkDirection { North, South, West, East }
 public enum charClass { Blank, Wizard, Rogue, Barbarian, Bard }
 public enum weaponTypes { None, WizardStaff, Sword } //ill add more later
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, MMEventListener<MMInventoryEvent>
 {
     public static PlayerController instance;
 
@@ -20,6 +22,8 @@ public class PlayerController : MonoBehaviour
     public Sprite[] heads;
     public Sprite[] body;
     private Vector2 input;
+    public PlayerInput playerInput;
+
 
     public float moveSpeed;
     public float spriteSwitchThreshhold = 0.5f;
@@ -47,6 +51,10 @@ public class PlayerController : MonoBehaviour
     public int maxHealth;
 
 
+    //other
+    public InventoryInputManager inventoryInputManager;
+
+
     private void Awake()
     {
         if (instance != null)
@@ -67,6 +75,7 @@ public class PlayerController : MonoBehaviour
         DontDestroyOnLoad(this);
 
         HealthManager.instance.HeartUpdate(health);
+        inventoryInputManager = FindObjectOfType<InventoryInputManager>();
     }
 
 
@@ -394,6 +403,30 @@ public class PlayerController : MonoBehaviour
         if(health <= 0)
         {
             //die. ill add this later
+        }
+    }
+
+
+
+    protected virtual void OnEnable()
+    {
+        this.MMEventStartListening<MMInventoryEvent>();
+    }
+
+    protected virtual void OnDisable()
+    {
+        this.MMEventStopListening<MMInventoryEvent>();
+    }
+
+    public void OnMMEvent(MMInventoryEvent inventoryEvent)
+    {
+        if (inventoryEvent.InventoryEventType == MMInventoryEventType.InventoryOpens)
+        {
+            canMove = false;
+        }
+        else if (inventoryEvent.InventoryEventType == MMInventoryEventType.InventoryCloses)
+        {
+            canMove = true;
         }
     }
 }

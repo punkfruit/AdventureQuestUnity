@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using MoreMountains.InventoryEngine;
+using MoreMountains.Tools;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class DialogueManager : MonoBehaviour
     public float typeSpeed = 0.03f;
     public string sentence;
 
+
+    private InventoryInputManager inventoryInputManager;
+
     private void Awake()
     {
         if (instance != null)
@@ -39,6 +44,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueIsPlaying = false;
         sentences = new Queue<Sentence>();
+        inventoryInputManager = FindObjectOfType<InventoryInputManager>();
     }
 
 
@@ -46,6 +52,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         dialogueIsPlaying = true;
+        inventoryInputManager.canOpenInventory = false;
         sentenceIsTyping = false;
         dialogueAnim.SetBool("isOpen", true);
         PlayerController.instance.canMove = false;
@@ -107,6 +114,12 @@ public class DialogueManager : MonoBehaviour
         dialogueAnim.SetBool("isOpen", false);
         PlayerController.instance.canMove = true;
         dialogueIsPlaying = false;
+        inventoryInputManager.canOpenInventory = true;
         Debug.Log("end log");
+    }
+
+    public bool IsDialoguePlaying
+    {
+        get { return dialogueIsPlaying; } // Assuming dialogueIsPlaying is the field that tracks dialogue status
     }
 }
