@@ -26,6 +26,7 @@ namespace MoreMountains.InventoryEngine
 			// with something like : 
 			// Player.Life += HealthValue;
 			// of course this all depends on your game codebase.
+			PlayerController.instance.Heal(HealthBonus);
 			Debug.LogFormat("increase character "+playerID+"'s health by "+HealthBonus);
 			return true;
 		}

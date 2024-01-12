@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48417c356aa393b48a91d187acc3198e, type: 3}
+  m_Script: {fileID: 11500000, guid: bb57267c49f6c2a41a7b4d041ebfc9b4, type: 3}
   m_Name: RedPotion
   m_EditorClassIdentifier: 
   ItemID: RedPotion
@@ -33,9 +33,9 @@ MonoBehaviour:
     DisplayUseButton: 1
     DisplayUnequipButton: 1
   Quantity: 1
-  ItemName: RedPotion
-  ShortDescription: sdf
-  Description: sdfsdf
+  ItemName: Health Potion
+  ShortDescription: asdasd
+  Description: asdasdasd
   Icon: {fileID: -582146629, guid: aa6897e8f03eaad4ea7ff4e93bf4bbec, type: 3}
   Prefab: {fileID: 4979733958412431546, guid: 5a7bc3cb4c41d954c8c0a643635b8b63, type: 3}
   ForcePrefabDropQuantity: 0
@@ -81,12 +81,12 @@ MonoBehaviour:
     MaximumRotation: {x: 0, y: 0, z: 0}
     MinimumScale: {x: 1, y: 1, z: 1}
     MaximumScale: {x: 1, y: 1, z: 1}
-  MaximumStack: 5
-  ItemClass: 0
+  MaximumStack: 1
+  ItemClass: 4
   TargetEquipmentInventoryName: 
   EquippedSound: {fileID: 0}
   UsedSound: {fileID: 0}
   MovedSound: {fileID: 0}
   DroppedSound: {fileID: 0}
   UseDefaultSoundsIfNull: 1
-  HealthBonus: 0
+  HealthBonus: 1
