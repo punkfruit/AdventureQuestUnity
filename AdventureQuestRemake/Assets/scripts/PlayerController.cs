@@ -406,6 +406,15 @@ public class PlayerController : MonoBehaviour, MMEventListener<MMInventoryEvent>
         }
     }
 
+    public void Heal(int num)
+    {
+        health += num;
+        if (health > maxHealth)
+            health = maxHealth;
+
+        HealthManager.instance.HeartUpdate(health);
+    }
+
 
 
     protected virtual void OnEnable()
