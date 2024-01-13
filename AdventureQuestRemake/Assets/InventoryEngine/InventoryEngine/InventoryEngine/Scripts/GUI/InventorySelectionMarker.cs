@@ -45,10 +45,12 @@ namespace MoreMountains.InventoryEngine
 				return;
 			}
 
+			/*
 			if (_currentSelection.gameObject.MMGetComponentNoAlloc<InventorySlot>() == null)
 			{
 				return;
 			}
+			*/
 
 			if (Vector3.Distance(transform.position,_currentSelection.transform.position) > MinimalTransitionDistance)
 			{

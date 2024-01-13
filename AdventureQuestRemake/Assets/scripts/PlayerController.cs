@@ -130,6 +130,23 @@ public class PlayerController : MonoBehaviour, MMEventListener<MMInventoryEvent>
         }
     }
 
+    public void SwitchWeapon(string weap)
+    {
+        if(weap == "staff")
+        {
+            currentWeapon = weaponTypes.WizardStaff;
+        }
+
+
+        mobileStaff.SetActive(true);
+    }
+
+    public void UnequipWeapon()
+    {
+        currentWeapon = weaponTypes.None;
+        mobileStaff.SetActive(false);
+    }
+
 
     public void WalkDirSpriteSwitch() //this will change many of the paramaters depending on which way the player is facing, what their class is, and what weapon theyre using. im doing it this way cause its important for the player to change things on the fly, like the current class
     {
@@ -378,17 +395,21 @@ public class PlayerController : MonoBehaviour, MMEventListener<MMInventoryEvent>
 
             if (canMove)
             {
-                //var swrd = Instantiate(sword, weaponSpawnPoint);
-                Vector3 poop = new Vector3(weaponSpawnPoint.position.x, weaponSpawnPoint.position.y, weaponSpawnPoint.position.z);
-                var swrd = Instantiate(sword, poop, weaponSpawnPoint.rotation);
+                if(currentWeapon != weaponTypes.None)
+                {
+                    //var swrd = Instantiate(sword, weaponSpawnPoint);
+                    Vector3 poop = new Vector3(weaponSpawnPoint.position.x, weaponSpawnPoint.position.y, weaponSpawnPoint.position.z);
+                    var swrd = Instantiate(sword, poop, weaponSpawnPoint.rotation);
 
-                swrd.transform.parent = gameObject.transform;
-                swrd.transform.localScale = weaponSpawnPoint.localScale;
-                canSwing = false;
-                canMove = false;
+                    swrd.transform.parent = gameObject.transform;
+                    swrd.transform.localScale = weaponSpawnPoint.localScale;
+                    canSwing = false;
+                    canMove = false;
 
-                mobileStaff.SetActive(false);
-                //Debug.Log("swung");
+                    mobileStaff.SetActive(false);
+                    //Debug.Log("swung");
+                }
+
             }
 
         }
