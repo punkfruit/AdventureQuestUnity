@@ -19,9 +19,9 @@ namespace MoreMountains.InventoryEngine
 
 		protected RectTransform _rectTransform;
 		protected GameObject _currentSelection;
-		protected Vector3 _originPosition;
-		protected Vector3 _originLocalScale;
-		protected Vector3 _originSizeDelta;
+		protected Vector3 _originPosition, _newPosition;
+		protected Vector3 _originLocalScale, _newLocalScale;
+		protected Vector3 _originSizeDelta, _newSizeDelta;
 		protected float _originTime;
 		protected bool _originIsNull=true;
 		protected float _deltaTime;
@@ -40,11 +40,15 @@ namespace MoreMountains.InventoryEngine
 		void Update () 
 		{			
 			_currentSelection = EventSystem.current.currentSelectedGameObject;
-			if (_currentSelection == null)
+			if (_currentSelection != null)
 			{
-				return;
-			}
+				//return;
 
+				_newPosition = _currentSelection.transform.position;
+				_newLocalScale = _currentSelection.GetComponent<RectTransform>().localScale;
+				_newSizeDelta = _currentSelection.GetComponent<RectTransform>().sizeDelta;
+			}
+			
 			/*
 			if (_currentSelection.gameObject.MMGetComponentNoAlloc<InventorySlot>() == null)
 			{
@@ -52,7 +56,7 @@ namespace MoreMountains.InventoryEngine
 			}
 			*/
 
-			if (Vector3.Distance(transform.position,_currentSelection.transform.position) > MinimalTransitionDistance)
+			if (Vector3.Distance(transform.position,_newPosition) > MinimalTransitionDistance)
 			{
 				if (_originIsNull)
 				{
@@ -63,9 +67,9 @@ namespace MoreMountains.InventoryEngine
 					_originTime = Time.unscaledTime;
 				} 
 				_deltaTime =  (Time.unscaledTime - _originTime)*TransitionSpeed;
-				transform.position= Vector3.Lerp(_originPosition,_currentSelection.transform.position,_deltaTime);
-				_rectTransform.localScale = Vector3.Lerp(_originLocalScale, _currentSelection.GetComponent<RectTransform>().localScale,_deltaTime);
-				_rectTransform.sizeDelta = Vector3.Lerp(_originSizeDelta, _currentSelection.GetComponent<RectTransform>().sizeDelta, _deltaTime);
+				transform.position= Vector3.Lerp(_originPosition,_newPosition,_deltaTime);
+				_rectTransform.localScale = Vector3.Lerp(_originLocalScale, _newLocalScale,_deltaTime);
+				_rectTransform.sizeDelta = Vector3.Lerp(_originSizeDelta, _newSizeDelta, _deltaTime);
 			}
 			else
 			{
