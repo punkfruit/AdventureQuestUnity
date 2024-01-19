@@ -8,7 +8,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     public Collider2D collid;
-    public bool sign, playerInRange;
+    public bool sign, playerInRange, canTriggerDialogue = true;
     public Animator dialogueAnim;
 
     public PlayerInput playerInput;
@@ -16,7 +16,9 @@ public class DialogueTrigger : MonoBehaviour
 
     public GameObject visulCue;
 
-    
+    public WaitForSeconds time = new WaitForSeconds(0.5f);
+
+
 
     private void Start()
     {
@@ -29,7 +31,7 @@ public class DialogueTrigger : MonoBehaviour
         inventoryInputManager = FindObjectOfType<InventoryInputManager>();
     }
 
-    
+
 
     private void OnDialoguePerformed(InputAction.CallbackContext context)
     {
@@ -85,30 +87,37 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        
+
         if (playerInRange)
         {
 
-                
-            if (dialogueAnim.GetBool("isOpen") == false)
+
+            if (!DialogueManager.instance.IsDialoguePlaying && canTriggerDialogue)
             {
 
                 DialogueManager.instance.StartDialogue(dialogue);
+                DialogueManager.instance.trig = this;
 
-
-            }
-            else
-            {
-                DialogueManager.instance.DisplayNextSentence();
-
+                canTriggerDialogue = false;
 
             }
 
 
 
         }
-        
 
 
+
+    }
+
+    public IEnumerator EndDialogueFixCO()
+    {
+        yield return time;
+        canTriggerDialogue = true;
+    }
+
+    public void EndDialogueFix()
+    {
+        StartCoroutine(EndDialogueFixCO()); //the dialogue manager cant start the coroutine here so i need 2 methods to start it ugh
     }
 }
