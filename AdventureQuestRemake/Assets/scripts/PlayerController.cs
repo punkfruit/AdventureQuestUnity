@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 public enum walkDirection { North, South, West, East }
 public enum charClass { Blank, Wizard, Rogue, Barbarian, Bard }
 public enum weaponTypes { None, WizardStaff, Sword } //ill add more later
-public class PlayerController : MonoBehaviour, MMEventListener<MMInventoryEvent>
+public class PlayerController : MonoBehaviour, MMEventListener<MMGameEvent>
 {
     public static PlayerController instance;
 
@@ -440,21 +440,22 @@ public class PlayerController : MonoBehaviour, MMEventListener<MMInventoryEvent>
 
     protected virtual void OnEnable()
     {
-        this.MMEventStartListening<MMInventoryEvent>();
+        this.MMEventStartListening<MMGameEvent>();
     }
 
     protected virtual void OnDisable()
     {
-        this.MMEventStopListening<MMInventoryEvent>();
+        this.MMEventStopListening<MMGameEvent>();
     }
 
-    public void OnMMEvent(MMInventoryEvent inventoryEvent)
+    public void OnMMEvent(MMGameEvent gameEvent)
     {
-        if (inventoryEvent.InventoryEventType == MMInventoryEventType.InventoryOpens)
+        if(gameEvent.EventName == "inventoryOpens")
         {
             canMove = false;
         }
-        else if (inventoryEvent.InventoryEventType == MMInventoryEventType.InventoryCloses)
+
+        if(gameEvent.EventName == "inventoryCloses")
         {
             canMove = true;
         }

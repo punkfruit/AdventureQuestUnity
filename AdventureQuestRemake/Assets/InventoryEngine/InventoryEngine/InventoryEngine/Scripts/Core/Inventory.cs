@@ -863,18 +863,21 @@ namespace MoreMountains.InventoryEngine
 			if (InventoryItem.IsNull(item))
 			{
 				MMInventoryEvent.Trigger(MMInventoryEventType.Error, slot, this.name, null, 0, index, PlayerID);
+				Debug.Log("no item here");
 				return;
 			}
 			// if we're not in an equipment inventory, we trigger an error
 			if (InventoryType != InventoryTypes.Equipment)
 			{
 				MMInventoryEvent.Trigger(MMInventoryEventType.Error, slot, this.name, null, 0, index, PlayerID);
-				return;
+                Debug.Log("not in equipment inventory");
+                return;
 			}
 			// we trigger the unequip effect of the item
 			if (!item.UnEquip(PlayerID))
 			{
-				return;
+                Debug.Log("unequip effect triggered");
+                return;
 			}
 			MMInventoryEvent.Trigger(MMInventoryEventType.ItemUnEquipped, slot, this.name, item, item.Quantity, index, PlayerID);
 

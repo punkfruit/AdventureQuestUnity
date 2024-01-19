@@ -551,11 +551,25 @@ namespace MoreMountains.InventoryEngine
 				_slotPrefab = newSlot.AddComponent<InventorySlot> ();
 				_slotPrefab.transition = Selectable.Transition.SpriteSwap;
 
-				Navigation explicitNavigation = new Navigation ();
-				explicitNavigation.mode = Navigation.Mode.Explicit;
-				_slotPrefab.GetComponent<InventorySlot> ().navigation = explicitNavigation;
+				
 
-				_slotPrefab.interactable = true;
+
+                if (EnableNavigation)
+				{
+					Navigation autoNav = new Navigation();
+					autoNav.mode = Navigation.Mode.Automatic;
+					_slotPrefab.GetComponent<InventorySlot>().navigation = autoNav;
+				}
+				else
+				{
+                    Navigation explicitNavigation = new Navigation();
+                    explicitNavigation.mode = Navigation.Mode.Explicit;
+                    _slotPrefab.GetComponent<InventorySlot> ().navigation = explicitNavigation;
+                }
+
+
+
+                _slotPrefab.interactable = true;
 
 				newSlot.AddComponent<CanvasGroup> ();
 				newSlot.MMGetComponentNoAlloc<CanvasGroup> ().alpha = 1;
@@ -639,72 +653,54 @@ namespace MoreMountains.InventoryEngine
 			theSlot.DrawIcon(TargetInventory.Content[i],i);
 		}
 
-		/// <summary>
-		/// Setups the slot navigation using Unity's GUI built-in system, so that the user can move using the left/right/up/down arrows
-		/// </summary>
-		protected virtual void SetupSlotNavigation()
+        /// <summary>
+        /// Setups the slot navigation using Unity's GUI built-in system, so that the user can move using the left/right/up/down arrows
+        /// </summary>
+        protected virtual void SetupSlotNavigation()
+        {
+            if (EnableNavigation)
+            {
+				for (int i = 0; i < SlotContainer.Count; i++)
+				{
+
+                    Navigation navigation = new Navigation();
+
+                    navigation.mode = Navigation.Mode.Automatic;
+                    SlotContainer[i].navigation = navigation;
+                }
+
+
+                return;
+            }
+
+            for (int i = 0; i < SlotContainer.Count; i++)
+            {
+                Navigation navigation = new Navigation();
+                navigation.mode = Navigation.Mode.Explicit;
+
+                // Set up navigation for up, down, left, right
+                navigation.selectOnUp = (i >= NumberOfColumns) ? SlotContainer[i - NumberOfColumns] : null;
+                navigation.selectOnDown = (i + NumberOfColumns < SlotContainer.Count) ? SlotContainer[i + NumberOfColumns] : null;
+                navigation.selectOnLeft = (i % NumberOfColumns != 0) ? SlotContainer[i - 1] : null;
+                navigation.selectOnRight = ((i + 1) % NumberOfColumns != 0 && i < SlotContainer.Count - 1) ? SlotContainer[i + 1] : null;
+
+                SlotContainer[i].navigation = navigation;
+            }
+        }
+
+
+        /// <summary>		
+        /// Sets the focus on the first item of the inventory		
+        /// </summary>		
+        public virtual void Focus()		
 		{
+
+			/*
 			if (!EnableNavigation)
 			{
-				return;
+				return;//culprit
 			}
-
-			for (int i=0; i<SlotContainer.Count;i++)
-			{
-				if (SlotContainer[i]==null)
-				{
-					return;
-				}
-				Navigation navigation = SlotContainer[i].navigation;
-				// we determine where to go when going up
-				if (i - NumberOfColumns >= 0) 
-				{
-					navigation.selectOnUp = SlotContainer[i-NumberOfColumns];
-				}
-				else
-				{
-					navigation.selectOnUp=null;
-				}
-				// we determine where to go when going down
-				if (i+NumberOfColumns < SlotContainer.Count) 
-				{
-					navigation.selectOnDown = SlotContainer[i+NumberOfColumns];
-				}
-				else
-				{
-					navigation.selectOnDown=null;
-				}
-				// we determine where to go when going left
-				if ((i%NumberOfColumns != 0) && (i>0))
-				{
-					navigation.selectOnLeft = SlotContainer[i-1];
-				}
-				else
-				{
-					navigation.selectOnLeft=null;
-				}
-				// we determine where to go when going right
-				if (((i+1)%NumberOfColumns != 0)  && (i<SlotContainer.Count - 1))
-				{
-					navigation.selectOnRight = SlotContainer[i+1];
-				}
-				else
-				{
-					navigation.selectOnRight=null;
-				}
-				SlotContainer[i].navigation = navigation;
-			}
-		}
-
-		/// <summary>		
-		/// Sets the focus on the first item of the inventory		
-		/// </summary>		
-		public virtual void Focus()		
-		{
-			if (!EnableNavigation)
-			{
-				return;
-			}
+			*/
 			
 			if (SlotContainer.Count > 0)
 			{
@@ -895,12 +891,12 @@ namespace MoreMountains.InventoryEngine
 					Focus();
 					InventoryDisplay.CurrentlyBeingMovedItemIndex = -1;
 					IsOpen = true;
-					EventSystem.current.sendNavigationEvents = true;
+					//EventSystem.current.sendNavigationEvents = true;
 					break;
 
 				case MMInventoryEventType.InventoryCloses:
 					InventoryDisplay.CurrentlyBeingMovedItemIndex = -1;
-					EventSystem.current.sendNavigationEvents = false;
+					//EventSystem.current.sendNavigationEvents = false;
 					IsOpen = false;
 					SetCurrentlySelectedSlot (inventoryEvent.Slot);
 					break;
