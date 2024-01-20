@@ -79,12 +79,23 @@ namespace MoreMountains.InventoryEngine
             DropKey.action.performed += HandleDropItem;
             MoveKey.action.performed += HandleMoveItem;
             PrevInvKey.action.performed += HandloePreviousInventory;
+
+            Debug.Log("inventory input manager enabled");
         }
 
         private void OnDisable()
         {
             ToggleInventoryKey.action.Disable();
             CancelKey.action.Disable();
+            EquipKey.action.Disable();
+            UseKey.action.Disable();
+            UseOrEquipKey.action.Disable();
+            UnequipKey.action.Disable();
+            DropKey.action.Disable();
+            MoveKey.action.Disable();
+            PrevInvKey.action.Disable();
+
+            Debug.Log("inventory input manager disabled");
         }
 
         private void HandleToggleInventory(InputAction.CallbackContext context)
@@ -141,8 +152,18 @@ namespace MoreMountains.InventoryEngine
 
         public void EquipItem()
         {
-            if(CurrentlySelectedInventorySlot != null)
+            if (!InventoryIsOpen)
+                return;
+
+            if (CurrentlySelectedInventorySlot != null)
+            {
+                if (CurrentlySelectedInventorySlot.ParentInventoryDisplay.name == "EquipmentInventory")
+                {
+                    Debug.Log("this is the equipment inventory");
+                    return;
+                }
                 CurrentlySelectedInventorySlot.Equip();
+            }
         }
 
         private void HandleUseItem(InputAction.CallbackContext context)
@@ -152,6 +173,10 @@ namespace MoreMountains.InventoryEngine
 
         public void UseItem()
         {
+            if (!InventoryIsOpen)
+                return;
+
+            Debug.Log("use");
             if (CurrentlySelectedInventorySlot != null)
                 CurrentlySelectedInventorySlot.Use();
         }
@@ -166,14 +191,17 @@ namespace MoreMountains.InventoryEngine
             if (CurrentlySelectedInventorySlot == null)
                 return;
 
+            if (!InventoryIsOpen)
+                return;
+
 
             if (CurrentlySelectedInventorySlot.Equippable())
             {
-                CurrentlySelectedInventorySlot.Equip();
+                EquipItem();
             }
             if (CurrentlySelectedInventorySlot.Usable())
             {
-                CurrentlySelectedInventorySlot.Use();
+                UseItem();
             }
         }
 
@@ -184,6 +212,10 @@ namespace MoreMountains.InventoryEngine
 
         public void UnequipItem()
         {
+            if (!InventoryIsOpen)
+                return;
+
+            Debug.Log("un equip");
             if (CurrentlySelectedInventorySlot != null)
                 CurrentlySelectedInventorySlot.UnEquip();
         }
@@ -195,6 +227,10 @@ namespace MoreMountains.InventoryEngine
 
         public void DropItem()
         {
+            if (!InventoryIsOpen)
+                return;
+
+            Debug.Log("drop");
             if (CurrentlySelectedInventorySlot != null)
                 CurrentlySelectedInventorySlot.Drop();
         }
@@ -206,6 +242,10 @@ namespace MoreMountains.InventoryEngine
 
         public void MoveItem()
         {
+            if (!InventoryIsOpen)
+                return;
+
+            Debug.Log("move");
             if (CurrentlySelectedInventorySlot != null)
                 CurrentlySelectedInventorySlot.Move();
         }

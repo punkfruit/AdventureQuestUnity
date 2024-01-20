@@ -40,6 +40,9 @@ public class DialogueManager : MonoBehaviour
     public InputAction navigateChoices;
     public InputAction selectChoice;
 
+    private WaitForSeconds seconds;
+   
+
     private void Awake()
     {
         if (instance != null)
@@ -63,6 +66,8 @@ public class DialogueManager : MonoBehaviour
         {
             playerInput.actions["Dialogue"].performed += OnDialoguePerformed;
         }
+
+        seconds = new WaitForSeconds(0.5f);
     }
 
 
@@ -114,7 +119,7 @@ public class DialogueManager : MonoBehaviour
                 // Display the sentence text
                 StartCoroutine(TypeSentence(currentSentence.text));
                 // Then display the choices
-                DisplayChoices(sentenceWithChoices.choices);
+                StartCoroutine(DisplayChoices(sentenceWithChoices.choices));
             }
             else
             {
@@ -124,33 +129,50 @@ public class DialogueManager : MonoBehaviour
     }
 
 
-    public void DisplayChoices(DialogueChoice[] choices)
+    public IEnumerator DisplayChoices(DialogueChoice[] choices)
     {
-        GameObject firstButton = null;
+        yield return seconds; // Delay to prevent immediate selection
+
+        List<GameObject> choiceButtons = new List<GameObject>();
         choicesDisplayed = true;
+
+        // Create buttons for each choice
         foreach (DialogueChoice choice in choices)
         {
             GameObject buttonObj = Instantiate(choiceButtonPrefab, choiceButtonContainer);
 
-            // Set the button text
-            TextMeshProUGUI buttonText = buttonObj.GetComponentInChildren<TextMeshProUGUI>(); // Or TextMeshProUGUI for TextMesh Pro
+            // Set button text
+            TextMeshProUGUI buttonText = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
             buttonText.text = choice.choiceText;
 
-            // Add an OnClick listener
+            // Add OnClick listener
             Button button = buttonObj.GetComponent<Button>();
             button.onClick.AddListener(() => OnChoiceSelected(choice));
 
-            if (firstButton == null)
-            {
-                firstButton = buttonObj;
-            }
+            choiceButtons.Add(buttonObj);
         }
 
-        if (firstButton != null)
+        // Setup navigation for buttons
+        for (int i = 0; i < choiceButtons.Count; i++)
         {
-            EventSystem.current.SetSelectedGameObject(firstButton);
+            Navigation navigation = new Navigation();
+            navigation.mode = Navigation.Mode.Explicit;
+            Button button = choiceButtons[i].GetComponent<Button>();
+
+            // Set left and right navigation
+            navigation.selectOnLeft = (i > 0) ? choiceButtons[i - 1].GetComponent<Button>() : null;
+            navigation.selectOnRight = (i < choiceButtons.Count - 1) ? choiceButtons[i + 1].GetComponent<Button>() : null;
+
+            button.navigation = navigation;
+        }
+
+        // Set the first button as the selected object
+        if (choiceButtons.Count > 0)
+        {
+            EventSystem.current.SetSelectedGameObject(choiceButtons[0]);
         }
     }
+
 
 
 
