@@ -9,7 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     public Dialogue dialogue;
     public Collider2D collid;
     public bool sign, playerInRange, canTriggerDialogue = true;
-    public Animator dialogueAnim;
+    //public Animator dialogueAnim;
 
     public PlayerInput playerInput;
     private InventoryInputManager inventoryInputManager;
