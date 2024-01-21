@@ -89,7 +89,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        Debug.Log("dialogue triggered");
+        //Debug.Log("dialogue triggered");
         if (playerInRange)
         {
 

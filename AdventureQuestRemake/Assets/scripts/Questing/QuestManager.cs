@@ -23,6 +23,8 @@ public class QuestManager : MonoBehaviour
     [Header("Quest Details")]
     public TextMeshProUGUI ElementName;
     public TextMeshProUGUI ElementDescription, QuestDescription;
+    public Image icon;
+    public Sprite defaultIcon;
 
     public bool QuestMenuOpen = false;
 
@@ -65,6 +67,7 @@ public class QuestManager : MonoBehaviour
         ElementName.text = string.Empty;
         ElementDescription.text = string.Empty;
         QuestDescription.text = string.Empty;
+        icon.sprite = null;
 
         List<GameObject> questButtons = new List<GameObject>();
 
@@ -75,6 +78,20 @@ public class QuestManager : MonoBehaviour
             // Set button text
             TextMeshProUGUI buttonText = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
             buttonText.text = quest.questName;
+
+            //setup button icon
+            Image[] img = buttonObj.GetComponentsInChildren<Image>();
+            if(quest.questIcon != null)
+            {
+                img[1].sprite = quest.questIcon;
+            }
+            else
+            {
+                img[1].sprite = defaultIcon;
+            }
+
+            //Debug.Log(img.Length);
+                
 
             // Add OnClick listener
             Button button = buttonObj.GetComponent<Button>();
@@ -125,6 +142,14 @@ public class QuestManager : MonoBehaviour
     {
         
         QuestDescription.text = quest.questDescription;
+        if(quest.questIcon != null)
+        {
+            icon.sprite = quest.questIcon;
+        }
+        else
+        {
+            icon.sprite = defaultIcon;
+        }
 
         foreach (QuestElement element in quest.questElements)
         {

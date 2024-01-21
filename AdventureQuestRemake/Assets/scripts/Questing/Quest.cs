@@ -10,6 +10,7 @@ public class Quest : ScriptableObject
     public string questName;
     [TextArea(3, 10)]
     public string questDescription;
+    public Sprite questIcon;
 
     public QuestElement[] questElements;
 }
