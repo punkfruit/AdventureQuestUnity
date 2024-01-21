@@ -67,7 +67,7 @@ public class DialogueManager : MonoBehaviour
             playerInput.actions["Dialogue"].performed += OnDialoguePerformed;
         }
 
-        seconds = new WaitForSeconds(0.5f);
+        seconds = new WaitForSeconds(0.05f);
     }
 
 
@@ -83,6 +83,8 @@ public class DialogueManager : MonoBehaviour
         PlayerController.instance.canMove = false;
         sentences.Clear();
 
+        //Debug.Log(" dialogue started");
+
         foreach (Sentence sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
@@ -92,6 +94,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        //Debug.Log(" displaying next sentence");
         if (sentences.Count == 0 && !sentenceIsTyping && currentSentence && !choicesDisplayed)
         {
             EndDialogue();

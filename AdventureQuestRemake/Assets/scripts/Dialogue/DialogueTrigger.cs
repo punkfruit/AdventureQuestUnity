@@ -23,10 +23,7 @@ public class DialogueTrigger : MonoBehaviour
     private void Start()
     {
         playerInput = PlayerController.instance.playerInput;
-        if (playerInput != null)
-        {
-            playerInput.actions["Dialogue"].performed += OnDialoguePerformed;
-        }
+        
         // Find the InventoryInputManager instance
         inventoryInputManager = FindObjectOfType<InventoryInputManager>();
     }
@@ -71,6 +68,7 @@ public class DialogueTrigger : MonoBehaviour
         if (other.tag == "Player")
         {
             playerInRange = true;
+            playerInput.actions["Dialogue"].performed += OnDialoguePerformed;
 
 
         }
@@ -81,6 +79,7 @@ public class DialogueTrigger : MonoBehaviour
         if (other.tag == "Player")
         {
             playerInRange = false;
+            playerInput.actions["Dialogue"].performed -= OnDialoguePerformed;
 
             if (visulCue != null)
                 visulCue.SetActive(false);
@@ -90,7 +89,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-
+        Debug.Log("dialogue triggered");
         if (playerInRange)
         {
 
