@@ -38,7 +38,10 @@ public class DialogueTrigger : MonoBehaviour
         // Check if the inventory is not open before triggering dialogue
         if (inventoryInputManager != null && !inventoryInputManager.InventoryIsOpen)
         {
-            TriggerDialogue();
+            if (!QuestManager.instance.QuestMenuOpen)
+            {
+                TriggerDialogue();
+            }
         }
     }
 

@@ -24,6 +24,7 @@ namespace MoreMountains.InventoryEngine
 
 
 
+
         public GameObject _currentSelection;
         public InventorySlot _currentInventorySlot;
         public InventorySlot CurrentlySelectedInventorySlot;
@@ -70,6 +71,7 @@ namespace MoreMountains.InventoryEngine
             MoveKey.action.Enable();
             PrevInvKey.action.Enable();
 
+
             ToggleInventoryKey.action.performed += HandleToggleInventory;
             CancelKey.action.performed += HandleCancel;
             EquipKey.action.performed += HandleEquipItem;
@@ -80,7 +82,8 @@ namespace MoreMountains.InventoryEngine
             MoveKey.action.performed += HandleMoveItem;
             PrevInvKey.action.performed += HandloePreviousInventory;
 
-            Debug.Log("inventory input manager enabled");
+
+            //Debug.Log("inventory input manager enabled");
         }
 
         private void OnDisable()
@@ -95,7 +98,7 @@ namespace MoreMountains.InventoryEngine
             MoveKey.action.Disable();
             PrevInvKey.action.Disable();
 
-            Debug.Log("inventory input manager disabled");
+            //Debug.Log("inventory input manager disabled");
         }
 
         private void HandleToggleInventory(InputAction.CallbackContext context)
@@ -130,6 +133,7 @@ namespace MoreMountains.InventoryEngine
             TargetInventoryContainer.alpha = 1;
             TargetInventoryContainer.blocksRaycasts = true;
             // Add any additional logic for opening the inventory
+            Debug.Log("inventory open");
 
         }
 

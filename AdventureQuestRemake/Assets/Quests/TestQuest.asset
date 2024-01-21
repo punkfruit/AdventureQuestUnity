@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa71c0de5e71242b5b6fd30d162d1360, type: 3}
+  m_Name: TestQuest
+  m_EditorClassIdentifier: 
+  QuestID: 0
+  questName: First Quest!
+  questDescription: this is my first quest! yay!
+  questElements:
+  - elementName: one
+    elementDescription: this is element 1
+    elementCompleted: 0
+  - elementName: two
+    elementDescription: "this is element 2!!!!\t\t"
+    elementCompleted: 0
+  - elementName: three
+    elementDescription: tis the end boyo
+    elementCompleted: 0

@@ -77,6 +77,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         ClearChoices();
         inventoryInputManager.canOpenInventory = false;
+        QuestManager.instance.canOpenQuestMenu = false;
         sentenceIsTyping = false;
         dialogueAnim.SetBool("isOpen", true);
         PlayerController.instance.canMove = false;
@@ -227,6 +228,7 @@ public class DialogueManager : MonoBehaviour
         PlayerController.instance.canMove = true;
         dialogueIsPlaying = false;
         inventoryInputManager.canOpenInventory = true;
+        QuestManager.instance.canOpenQuestMenu = true;
         Debug.Log("end log");
 
         if (trig != null)
