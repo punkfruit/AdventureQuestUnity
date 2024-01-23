@@ -15,6 +15,7 @@ public class LevelTransition : MonoBehaviour
         {
             SceneManager.LoadScene(scene);
             PlayerController.instance.transform.position = nextScenePlayerLocation;
+            CameraController.instance.MoveCam();
         }
     }
 }
