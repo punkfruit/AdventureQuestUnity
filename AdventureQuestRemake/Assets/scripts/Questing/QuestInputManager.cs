@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class QuestInputManager : MonoBehaviour, MMEventListener<MMGameEvent>
 {
@@ -29,7 +30,7 @@ public class QuestInputManager : MonoBehaviour, MMEventListener<MMGameEvent>
 
     private void Start()
     {
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
         CloseQuestMenu();
 
         inventoryInputManager = FindObjectOfType<InventoryInputManager>();
@@ -48,10 +49,27 @@ public class QuestInputManager : MonoBehaviour, MMEventListener<MMGameEvent>
 
 
         this.MMEventStartListening<MMGameEvent>();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
 
+    private void OnDestroy()
+    {
+        ToggleQuestMenuKey.action.Disable();
+        CancelKey.action.Disable();
+        ActionKey.action.Disable();
 
+        ToggleQuestMenuKey.action.performed -= HandleToggleQuestMenu;
+        CancelKey.action.performed -= HandleCloseQuestMenu;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Reassign references here
+        Qman = FindObjectOfType<QuestManager>();
+        inventoryInputManager = FindObjectOfType<InventoryInputManager>();
+        // Add similar lines for other references that might be lost on scene load
+    }
 
 
 
@@ -77,7 +95,19 @@ public class QuestInputManager : MonoBehaviour, MMEventListener<MMGameEvent>
 
     public void OpenQuestMenu()
     {
-        if(Qman.canOpenQuestMenu)
+
+        if (Qman == null)
+        {
+            Debug.Log("Qman is null, attempting to find QuestManager.");
+            Qman = FindObjectOfType<QuestManager>();
+            if (Qman == null) Debug.LogError("Failed to find QuestManager.");
+        }
+        if (inventoryInputManager == null)
+        {
+            inventoryInputManager = FindObjectOfType<InventoryInputManager>();
+        }
+
+        if (Qman.canOpenQuestMenu)
         {
             QuestMenu.SetActive(true);
             Qman.QuestMenuOpen = true;
@@ -95,6 +125,18 @@ public class QuestInputManager : MonoBehaviour, MMEventListener<MMGameEvent>
 
     public void CloseQuestMenu()
     {
+
+        if (Qman == null)
+        {
+            Debug.Log("Qman is null, attempting to find QuestManager.");
+            Qman = FindObjectOfType<QuestManager>();
+            if (Qman == null) Debug.LogError("Failed to find QuestManager.");
+        }
+        if (inventoryInputManager == null)
+        {
+            inventoryInputManager = FindObjectOfType<InventoryInputManager>();
+        }
+
         QuestMenu.SetActive(false);
         Qman.QuestMenuOpen = false;
         inventoryInputManager.canOpenInventory = true;
