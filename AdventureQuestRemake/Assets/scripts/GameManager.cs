@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        //DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this);
 
 
         MMEventManager.TriggerEvent(new MMGameEvent("Load"));

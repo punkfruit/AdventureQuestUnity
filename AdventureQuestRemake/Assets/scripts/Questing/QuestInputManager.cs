@@ -29,6 +29,7 @@ public class QuestInputManager : MonoBehaviour, MMEventListener<MMGameEvent>
 
     private void Start()
     {
+        DontDestroyOnLoad(this);
         CloseQuestMenu();
 
         inventoryInputManager = FindObjectOfType<InventoryInputManager>();
