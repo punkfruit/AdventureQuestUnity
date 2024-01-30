@@ -43,6 +43,24 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    public void AddQuest(Quest questToAdd)
+    {
+        quests.Add(questToAdd);
+    }
+
+    public bool QuestAlreadyAdded(Quest questToCheck)
+    {
+        for(int i = 0; i < quests.Count; i++)
+        {
+            if(questToCheck.QuestID == quests[i].QuestID)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private void Update()
     {
         //CheckCurrentlySelectedSlot();

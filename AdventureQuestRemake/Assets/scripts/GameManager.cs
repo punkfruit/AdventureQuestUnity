@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public InputActionAsset inputActions;
+    public NotificationManager notificationManager;
     // Start is called before the first frame update
 
     private void Awake()

@@ -78,12 +78,17 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            playerInRange = false;
-            playerInput.actions["Dialogue"].performed -= OnDialoguePerformed;
+            DisableTrigger();
 
             if (visulCue != null)
                 visulCue.SetActive(false);
         }
+    }
+
+    public void DisableTrigger()
+    {
+        playerInRange = false;
+        playerInput.actions["Dialogue"].performed -= OnDialoguePerformed;
     }
 
 
