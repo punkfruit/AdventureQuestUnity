@@ -43,9 +43,13 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-    public void AddQuest(Quest questToAdd)
+    public void AddQuest(Quest questToAdd) //adding a quest for the first time!! use future LoadQuest for any other time
     {
         quests.Add(questToAdd);
+        for(int i = 0; i < questToAdd.questElements.Length; i++)
+        {
+            questToAdd.questElements[i].elementCompleted = false; //resets quest to base state for when adding it for the first time.
+        }
     }
 
     public bool QuestAlreadyAdded(Quest questToCheck)
@@ -205,7 +209,11 @@ public class QuestManager : MonoBehaviour
     {
         for (int i = 0; i < quests.Count; i++)
         {
-            //if(quests)
+            if(quests[i].QuestID == questID)
+            {
+                quests[i].questElements[ElementID].elementCompleted = true;
+                return;
+            }
         }
     }
 

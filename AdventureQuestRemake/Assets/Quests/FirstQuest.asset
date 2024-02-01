@@ -15,7 +15,7 @@ MonoBehaviour:
   QuestID: 1
   questName: Acquire Weapon
   questDescription: I need a weapon!
-  questIcon: {fileID: 0}
+  questIcon: {fileID: -197670570, guid: aa6897e8f03eaad4ea7ff4e93bf4bbec, type: 3}
   questElements:
   - elementName: Head West
     elementDescription: The barman said i could find a potential weapon in a cave
@@ -23,4 +23,7 @@ MonoBehaviour:
     elementCompleted: 0
   - elementName: Navigate Cave
     elementDescription: Should be in here somewhere,..
+    elementCompleted: 0
+  - elementName: Ive got it!
+    elementDescription: Time to put it to use!
     elementCompleted: 0
