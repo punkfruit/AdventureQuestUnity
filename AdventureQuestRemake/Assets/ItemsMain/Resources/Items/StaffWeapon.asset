@@ -22,13 +22,13 @@ MonoBehaviour:
   Equippable: 1
   EquippableIfInventoryIsFull: 1
   MoveWhenEquipped: 1
-  Droppable: 1
+  Droppable: 0
   CanMoveObject: 1
-  CanSwapObject: 1
+  CanSwapObject: 0
   DisplayProperties:
     DisplayEquipUseButton: 1
     DisplayMoveButton: 1
-    DisplayDropButton: 1
+    DisplayDropButton: 0
     DisplayEquipButton: 1
     DisplayUseButton: 1
     DisplayUnequipButton: 1

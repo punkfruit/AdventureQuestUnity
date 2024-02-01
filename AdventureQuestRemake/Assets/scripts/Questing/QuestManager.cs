@@ -201,4 +201,13 @@ public class QuestManager : MonoBehaviour
     }
 
 
+    public void AdvanceElement(int questID, int ElementID)
+    {
+        for (int i = 0; i < quests.Count; i++)
+        {
+            //if(quests)
+        }
+    }
+
+
 }
