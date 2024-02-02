@@ -10237,6 +10237,26 @@ MonoBehaviour:
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  NextInvKey:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Next Inv Key
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: f0e134cb-f18d-4b6b-82f7-9962f883c0d9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 8d820ca6-424e-4ef6-a227-b7512e9d5051
+        m_Path: <Gamepad>/rightShoulder
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Next Inv Key
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   _currentSelection: {fileID: 0}
   _currentInventorySlot: {fileID: 0}
   CurrentlySelectedInventorySlot: {fileID: 0}

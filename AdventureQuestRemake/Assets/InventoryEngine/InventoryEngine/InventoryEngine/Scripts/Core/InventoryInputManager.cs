@@ -21,6 +21,7 @@ namespace MoreMountains.InventoryEngine
         public InputActionProperty DropKey;
         public InputActionProperty MoveKey;
         public InputActionProperty PrevInvKey;
+        public InputActionProperty NextInvKey;
 
 
 
@@ -70,6 +71,7 @@ namespace MoreMountains.InventoryEngine
             DropKey.action.Enable();
             MoveKey.action.Enable();
             PrevInvKey.action.Enable();
+            NextInvKey.action.Enable();
 
 
             ToggleInventoryKey.action.performed += HandleToggleInventory;
@@ -81,6 +83,7 @@ namespace MoreMountains.InventoryEngine
             DropKey.action.performed += HandleDropItem;
             MoveKey.action.performed += HandleMoveItem;
             PrevInvKey.action.performed += HandloePreviousInventory;
+            NextInvKey.action.performed += HandleNextInventory;
 
 
             //Debug.Log("inventory input manager enabled");
@@ -97,6 +100,7 @@ namespace MoreMountains.InventoryEngine
             DropKey.action.Disable();
             MoveKey.action.Disable();
             PrevInvKey.action.Disable();
+            NextInvKey.action.Disable();
 
             //Debug.Log("inventory input manager disabled");
         }
@@ -265,6 +269,19 @@ namespace MoreMountains.InventoryEngine
             if(TargetInventoryDisplay.GoToInventory(-1) != null)
             {
                 TargetInventoryDisplay.GoToInventory(-1);
+            }
+        }
+
+        private void HandleNextInventory(InputAction.CallbackContext context)
+        {
+            NextInventory();
+        }
+
+        public void NextInventory()
+        {
+            if (TargetInventoryDisplay.GoToInventory(1) != null)
+            {
+                TargetInventoryDisplay.GoToInventory(1);
             }
         }
     }

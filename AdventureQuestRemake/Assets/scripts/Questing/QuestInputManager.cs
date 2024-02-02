@@ -148,7 +148,11 @@ public class QuestInputManager : MonoBehaviour, MMEventListener<MMGameEvent>
 
     private void HandleCloseQuestMenu(InputAction.CallbackContext context)
     {
-        CloseQuestMenu();
+        if (Qman.QuestMenuOpen)
+        {
+            CloseQuestMenu();
+        }
+        
     }
 
 
