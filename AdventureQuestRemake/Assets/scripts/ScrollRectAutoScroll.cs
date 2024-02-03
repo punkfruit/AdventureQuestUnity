@@ -17,6 +17,7 @@ public class ScrollRectAutoScroll : MonoBehaviour, IPointerEnterHandler, IPointe
 
     // Reference to the Input Actions
     public InputAction moveAction;
+    //switched 2dvector to analog from digital normalized to make it work on webgl
 
     void Awake()
     {
