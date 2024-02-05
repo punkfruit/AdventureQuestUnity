@@ -684,6 +684,24 @@ namespace MoreMountains.InventoryEngine
 			Debug.LogFormat("Inventory save file deleted");
 		}
 
+		/*
+		public void SaveTEST()
+        {
+			// set the path to save slot A
+			Inventory._saveFolderName = "InventoryEngine/SaveA/";
+			// trigger a save of current inventories on slot A
+			MMEventManager.TriggerEvent(new MMGameEvent("Save"));
+		}
+
+		public void LoadTEST()
+        {
+			// set the path to save slot A
+			Inventory._saveFolderName = "InventoryEngine/SaveA/";
+			// trigger a load of current inventories on slot A
+			MMEventManager.TriggerEvent(new MMGameEvent("Load"));
+
+		}
+		*/
 		/// <summary>
 		/// Triggers the use and potential consumption of the item passed in parameter. You can also specify the item's slot (optional) and index.
 		/// </summary>
