@@ -5805,6 +5805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fonts:
   - {fileID: 12800000, guid: a688425022f6362448127693ef51bfdf, type: 3}
+  inv: {fileID: 5172990518124798133}
 --- !u!114 &4223688060510082260
 MonoBehaviour:
   m_ObjectHideFlags: 0
