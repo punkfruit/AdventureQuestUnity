@@ -22,6 +22,7 @@ public class SetFontNearest : MonoBehaviour
 
 
 		//set late to avoid errors. i might move this stuff somewhere else later
+		inv.SaveInventory();
 		inv.LoadSavedInventory();
 
 
