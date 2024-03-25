@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System;
 
 public class QuestManager : MonoBehaviour
 {
@@ -26,10 +27,12 @@ public class QuestManager : MonoBehaviour
     public Image icon;
     public Sprite defaultIcon;
 
+    public QuestList QuestHolder;
     public bool QuestMenuOpen = false;
 
     public bool canOpenQuestMenu = true;
     public int test;
+    public int[] testArray;
 
     private void Awake()
     {
@@ -43,6 +46,18 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        if (!PlayerPrefs.HasKey("QuestList"))
+        {
+            PlayerPrefs.SetString("QuestList", "");
+        }
+        else
+        {
+            LoadQuest();
+        }
+    }
+
     public void AddQuest(Quest questToAdd) //adding a quest for the first time!! use future LoadQuest for any other time
     {
         quests.Add(questToAdd);
@@ -50,6 +65,13 @@ public class QuestManager : MonoBehaviour
         {
             questToAdd.questElements[i].elementCompleted = false; //resets quest to base state for when adding it for the first time.
         }
+
+        SaveQuestList();
+    }
+
+    public void AddQuestWithInt(int num)
+    {
+        quests.Add(QuestHolder.Quest_List[num]);
     }
 
     public bool QuestAlreadyAdded(Quest questToCheck)
@@ -63,6 +85,35 @@ public class QuestManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void LoadQuest()
+    {
+        string testString = PlayerPrefs.GetString("QuestList");
+        // Split the string into an array of strings using the comma as a separator
+        string[] questIdStrings = testString.Split(',');
+        quests.Clear();
+        // Iterate over each string in the array
+        foreach (string questIdString in questIdStrings)
+        {
+            // Convert the string to an integer
+            int questId = Int32.Parse(questIdString);
+
+            // Call your method with the integer
+            AddQuestWithInt(questId);
+        }
+    }
+
+    public void SaveQuestList()
+    {
+
+        string testString = "";
+        foreach(Quest quest in quests)
+        {
+            testString = (testString + quest.QuestID + ",");
+        }
+
+        PlayerPrefs.SetString("QuestList", testString);
     }
 
     private void Update()

@@ -3889,6 +3889,7 @@ MonoBehaviour:
   QuestDescription: {fileID: 5172990516961038998}
   icon: {fileID: 5172990518176400635}
   defaultIcon: {fileID: 21300000, guid: a1fbd1aaf76d0b94e88551b7c406ee2c, type: 3}
+  QuestHolder: {fileID: 11400000, guid: 2ad44d6bfcc5c4b058bcdfae955a629d, type: 2}
   QuestMenuOpen: 0
   canOpenQuestMenu: 1
   test: 0
