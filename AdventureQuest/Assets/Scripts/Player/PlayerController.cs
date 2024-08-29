@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
 
     [Header("Technical")]
+    public Color flashColor;
     public Animator anim;
     public Rigidbody2D theRB;
     public SpriteRenderer spr;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public int weaponDamage;
     public int health, maxhealth;
+    public float flash = 0;
 
 
     private void Awake()
@@ -43,6 +45,8 @@ public class PlayerController : MonoBehaviour
         playerInput.onControlsChanged += OnControlsChanged;
 
         OnControlsChanged(playerInput); //inital control detection!
+        
+        spr.material.SetColor("_FlashColor", flashColor);
     }
 
     private void OnControlsChanged(PlayerInput input)
@@ -74,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        //spr.material.SetFloat("_BlendOpacity", flash);
+        spr.material.SetFloat("_BlendOpacity", flash);
     }
 
     public void HandleAnimation()
