@@ -196,6 +196,7 @@
     "m_OutputNode": {
         "m_Id": ""
     },
+    "m_SubDatas": [],
     "m_ActiveTargets": [
         {
             "m_Id": "1136d1113ed44e679f1a06783cce04e7"
@@ -724,7 +725,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"dbc158f8c94d8034fae839a9df9a2f04\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"ca8ac3e7c2105504eae62e0250ebf0ee\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": true,
