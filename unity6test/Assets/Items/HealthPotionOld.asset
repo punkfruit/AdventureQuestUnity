@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b1294f2a2a00b45a5c34777048a20d, type: 3}
+  m_Name: HealthPotionOld
+  m_EditorClassIdentifier: 
+  id: 0
+  ItemName: Health Potion Dev
+  ItemDescription: this is an illegal item and does nothing, how did you get this?
+  Icon: {fileID: 1304592656324922926, guid: bddbb3981c5450944b92785a6e66079d, type: 3}
+  itemType: 0
+  stackable: 0
+  maxStackSize: 1

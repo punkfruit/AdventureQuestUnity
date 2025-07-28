@@ -1,0 +1,3250 @@
+fileFormatVersion: 2
+guid: f859fe6baefb9794997bc7fb55581232
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7848826364151497050
+    second: BlueScaleTentTree2_0
+  - first:
+      213: -6192468273569228438
+    second: BlueScaleTentTree2_1
+  - first:
+      213: -640030176822326244
+    second: BlueScaleTentTree2_2
+  - first:
+      213: -3431551113272581091
+    second: BlueScaleTentTree2_3
+  - first:
+      213: -5439381054159450553
+    second: BlueScaleTentTree2_4
+  - first:
+      213: 2195248182473065763
+    second: BlueScaleTentTree2_5
+  - first:
+      213: 4888187233143503212
+    second: BlueScaleTentTree2_6
+  - first:
+      213: -5622013662628835384
+    second: BlueScaleTentTree2_7
+  - first:
+      213: 3726240794569315478
+    second: BlueScaleTentTree2_8
+  - first:
+      213: -2521516919231921210
+    second: BlueScaleTentTree2_9
+  - first:
+      213: -755442595860207022
+    second: BlueScaleTentTree2_10
+  - first:
+      213: 4788765218106930462
+    second: BlueScaleTentTree2_11
+  - first:
+      213: -8671896754735721661
+    second: BlueScaleTentTree2_12
+  - first:
+      213: 3241475074563308075
+    second: BlueScaleTentTree2_13
+  - first:
+      213: 1644119378114583506
+    second: BlueScaleTentTree2_14
+  - first:
+      213: -4290240166141344348
+    second: BlueScaleTentTree2_15
+  - first:
+      213: -4927857072192835466
+    second: BlueScaleTentTree2_16
+  - first:
+      213: 7844744767553550862
+    second: BlueScaleTentTree2_17
+  - first:
+      213: -2040040116420998293
+    second: BlueScaleTentTree2_18
+  - first:
+      213: 4427699559624965804
+    second: BlueScaleTentTree2_19
+  - first:
+      213: 6056552405366545198
+    second: BlueScaleTentTree2_20
+  - first:
+      213: -1291942769910095603
+    second: BlueScaleTentTree2_21
+  - first:
+      213: -7016304090832776931
+    second: BlueScaleTentTree2_22
+  - first:
+      213: 1523856333428169329
+    second: BlueScaleTentTree2_23
+  - first:
+      213: -6893871515169020049
+    second: BlueScaleTentTree2_24
+  - first:
+      213: -6053705513763570302
+    second: BlueScaleTentTree2_25
+  - first:
+      213: -4846444020162326791
+    second: BlueScaleTentTree2_26
+  - first:
+      213: 6090277405043978588
+    second: BlueScaleTentTree2_27
+  - first:
+      213: -7872955177961668329
+    second: BlueScaleTentTree2_28
+  - first:
+      213: 6673424659223924617
+    second: BlueScaleTentTree2_29
+  - first:
+      213: -8538460749665598418
+    second: BlueScaleTentTree2_30
+  - first:
+      213: -897419244542120101
+    second: BlueScaleTentTree2_31
+  - first:
+      213: 3906915084544765111
+    second: BlueScaleTentTree2_32
+  - first:
+      213: 1958203947935373590
+    second: BlueScaleTentTree2_33
+  - first:
+      213: -6151408845383035545
+    second: BlueScaleTentTree2_34
+  - first:
+      213: 6709760666700678901
+    second: BlueScaleTentTree2_35
+  - first:
+      213: -5228982227105550608
+    second: BlueScaleTentTree2_36
+  - first:
+      213: -3999846617576718052
+    second: BlueScaleTentTree2_37
+  - first:
+      213: -3213157446350868744
+    second: BlueScaleTentTree2_38
+  - first:
+      213: 1239167349079700656
+    second: BlueScaleTentTree2_39
+  - first:
+      213: 6332692863183461497
+    second: BlueScaleTentTree2_40
+  - first:
+      213: 6417223208924822061
+    second: BlueScaleTentTree2_41
+  - first:
+      213: -292054162973170216
+    second: BlueScaleTentTree2_42
+  - first:
+      213: 9136447759266795287
+    second: BlueScaleTentTree2_43
+  - first:
+      213: -6375798122243691261
+    second: BlueScaleTentTree2_44
+  - first:
+      213: -6347991815967240476
+    second: BlueScaleTentTree2_45
+  - first:
+      213: 2901164273818357582
+    second: BlueScaleTentTree2_46
+  - first:
+      213: -5289085005905049495
+    second: BlueScaleTentTree2_47
+  - first:
+      213: -9069467078383517370
+    second: BlueScaleTentTree2_48
+  - first:
+      213: 7635541475638901830
+    second: BlueScaleTentTree2_49
+  - first:
+      213: -2994413021916319369
+    second: BlueScaleTentTree2_50
+  - first:
+      213: 4342260861618150562
+    second: BlueScaleTentTree2_51
+  - first:
+      213: 6874892100741839856
+    second: BlueScaleTentTree2_52
+  - first:
+      213: 8590463689218232122
+    second: BlueScaleTentTree2_53
+  - first:
+      213: -7803886113111311136
+    second: BlueScaleTentTree2_54
+  - first:
+      213: -4535246712229895059
+    second: BlueScaleTentTree2_55
+  - first:
+      213: -9053395712304236459
+    second: BlueScaleTentTree2_56
+  - first:
+      213: -7841567718111767915
+    second: BlueScaleTentTree2_57
+  - first:
+      213: -4645164412398987286
+    second: BlueScaleTentTree2_58
+  - first:
+      213: 1947134268302338548
+    second: BlueScaleTentTree2_59
+  - first:
+      213: 9113572081962946143
+    second: BlueScaleTentTree2_60
+  - first:
+      213: 3582884372159787566
+    second: BlueScaleTentTree2_61
+  - first:
+      213: -341750949981261232
+    second: BlueScaleTentTree2_62
+  - first:
+      213: 6731667664521089194
+    second: BlueScaleTentTree2_63
+  - first:
+      213: 8567418012739049276
+    second: BlueScaleTentTree2_64
+  - first:
+      213: 2534158058451125962
+    second: BlueScaleTentTree2_65
+  - first:
+      213: -3137795841758911651
+    second: BlueScaleTentTree2_66
+  - first:
+      213: 1689875548206779962
+    second: BlueScaleTentTree2_67
+  - first:
+      213: 6041428685990932859
+    second: BlueScaleTentTree2_68
+  - first:
+      213: -7159446598528165143
+    second: BlueScaleTentTree2_69
+  - first:
+      213: -5738270689515988076
+    second: BlueScaleTentTree2_70
+  - first:
+      213: 8978995052953387681
+    second: BlueScaleTentTree2_71
+  - first:
+      213: -549937681036567261
+    second: BlueScaleTentTree2_72
+  - first:
+      213: 4491723188378728787
+    second: BlueScaleTentTree2_73
+  - first:
+      213: 2180460454182898775
+    second: BlueScaleTentTree2_74
+  - first:
+      213: 8997681437156070488
+    second: BlueScaleTentTree2_75
+  - first:
+      213: -707145944739784043
+    second: BlueScaleTentTree2_76
+  - first:
+      213: 6518831756018336879
+    second: BlueScaleTentTree2_77
+  - first:
+      213: 1405653254526392496
+    second: BlueScaleTentTree2_78
+  - first:
+      213: -8151473832327403975
+    second: BlueScaleTentTree2_79
+  - first:
+      213: -2458058396302132898
+    second: BlueScaleTentTree2_80
+  - first:
+      213: -7174381041123565084
+    second: BlueScaleTentTree2_81
+  - first:
+      213: -2339260783030179683
+    second: BlueScaleTentTree2_82
+  - first:
+      213: 1411078142164459551
+    second: BlueScaleTentTree2_83
+  - first:
+      213: 7498920652660380999
+    second: BlueScaleTentTree2_84
+  - first:
+      213: -6199080657186262106
+    second: BlueScaleTentTree2_85
+  - first:
+      213: -2932988229919450003
+    second: BlueScaleTentTree2_86
+  - first:
+      213: -8413614729142266510
+    second: BlueScaleTentTree2_87
+  - first:
+      213: 8745519555255970522
+    second: BlueScaleTentTree2_88
+  - first:
+      213: 6838059881374234144
+    second: BlueScaleTentTree2_89
+  - first:
+      213: 1189230861808269596
+    second: BlueScaleTentTree2_90
+  - first:
+      213: 8104018143292400631
+    second: BlueScaleTentTree2_91
+  - first:
+      213: -7734259902310169090
+    second: BlueScaleTentTree2_92
+  - first:
+      213: 3485853885732099
+    second: BlueScaleTentTree2_93
+  - first:
+      213: 693418912921794440
+    second: BlueScaleTentTree2_94
+  - first:
+      213: 7314629384498427948
+    second: BlueScaleTentTree2_95
+  - first:
+      213: -8000521845315659661
+    second: BlueScaleTentTree2_96
+  - first:
+      213: -7041331075333630026
+    second: BlueScaleTentTree2_97
+  - first:
+      213: -4482241990571922913
+    second: BlueScaleTentTree2_98
+  - first:
+      213: -1862751761627272265
+    second: BlueScaleTentTree2_99
+  - first:
+      213: 7780647996341609897
+    second: BlueScaleTentTree2_100
+  - first:
+      213: -388623311399117121
+    second: BlueScaleTentTree2_101
+  - first:
+      213: 1563064347418935292
+    second: BlueScaleTentTree2_102
+  - first:
+      213: 2741916863664770684
+    second: BlueScaleTentTree2_103
+  - first:
+      213: 5150521058453084657
+    second: BlueScaleTentTree2_104
+  - first:
+      213: -8219966109049907801
+    second: BlueScaleTentTree2_105
+  - first:
+      213: -2756693992419909477
+    second: BlueScaleTentTree2_106
+  - first:
+      213: -631022988360735940
+    second: BlueScaleTentTree2_107
+  - first:
+      213: 7567794227125952596
+    second: BlueScaleTentTree2_108
+  - first:
+      213: -7669218534804329219
+    second: BlueScaleTentTree2_109
+  - first:
+      213: -3356971153032346493
+    second: BlueScaleTentTree2_110
+  - first:
+      213: 4440843518590894907
+    second: BlueScaleTentTree2_111
+  - first:
+      213: -5895417360722215675
+    second: BlueScaleTentTree2_112
+  - first:
+      213: -1272307450685027541
+    second: BlueScaleTentTree2_113
+  - first:
+      213: 5549035103916138540
+    second: BlueScaleTentTree2_114
+  - first:
+      213: -6892354039392762729
+    second: BlueScaleTentTree2_115
+  - first:
+      213: -9130953038914980380
+    second: BlueScaleTentTree2_116
+  - first:
+      213: -6893429088386832316
+    second: BlueScaleTentTree2_117
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 628
+        width: 152
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5188fa4ef1acec60800000000000000
+      internalID: 7848826364151497050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_1
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 625
+        width: 156
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a69970f0aeeef0aa0800000000000000
+      internalID: -6192468273569228438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_2
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 626
+        width: 142
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1c89f8f1f72e17f0800000000000000
+      internalID: -640030176822326244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 563
+        width: 95
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d14aac0917ea060d0800000000000000
+      internalID: -3431551113272581091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_4
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 559
+        width: 65
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e06d410cf6384b0800000000000000
+      internalID: -5439381054159450553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_5
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 565
+        width: 73
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325012e4796177e10800000000000000
+      internalID: 2195248182473065763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_6
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 564
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c693e1bc36456d340800000000000000
+      internalID: 4888187233143503212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 394
+        width: 99
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cf8d9c4c589af1b0800000000000000
+      internalID: -5622013662628835384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_8
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 395
+        width: 87
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6949fdb924446b330800000000000000
+      internalID: 3726240794569315478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 471
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c34b06b8b5c10dd0800000000000000
+      internalID: -2521516919231921210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_10
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 471
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25aad8926f02485f0800000000000000
+      internalID: -755442595860207022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_11
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 471
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e15720a089c157240800000000000000
+      internalID: 4788765218106930462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_12
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 394
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3435d15e8db37a780800000000000000
+      internalID: -8671896754735721661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_13
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 394
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2af0aff7680cfc20800000000000000
+      internalID: 3241475074563308075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_14
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 394
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db1bdc0dd511d610800000000000000
+      internalID: 1644119378114583506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_15
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 427
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a54800bc410674c0800000000000000
+      internalID: -4290240166141344348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_16
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 427
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670bc0c0a1cbc9bb0800000000000000
+      internalID: -4927857072192835466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_17
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 391
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0a32a78dc12edc60800000000000000
+      internalID: 7844744767553550862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_18
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 391
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b0e2d925250b3e0800000000000000
+      internalID: -2040040116420998293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_19
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 325
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae799f5a49527d30800000000000000
+      internalID: 4427699559624965804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_20
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 323
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b196dd2523d0450800000000000000
+      internalID: 6056552405366545198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_21
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 319
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01ef5155e8121ee0800000000000000
+      internalID: -1291942769910095603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_22
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 319
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11dac57a9411ae90800000000000000
+      internalID: -7016304090832776931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_23
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 332
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a17b2f243d52510800000000000000
+      internalID: 1523856333428169329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_24
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 332
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67aa2bd16c0450a0800000000000000
+      internalID: -6893871515169020049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_25
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 343
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d7c4db8eaecfba0800000000000000
+      internalID: -6053705513763570302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_26
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 352
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe886a57d8fdbcb0800000000000000
+      internalID: -4846444020162326791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_27
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 346
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51fb3f3803058450800000000000000
+      internalID: 6090277405043978588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_28
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 344
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 711c5057af4adb290800000000000000
+      internalID: -7872955177961668329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_29
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 293
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fcf58ce54cc9c50800000000000000
+      internalID: 6673424659223924617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_30
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 294
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e240197df2b418980800000000000000
+      internalID: -8538460749665598418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_31
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 308
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5fa77aa3f9bb83f0800000000000000
+      internalID: -897419244542120101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_32
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 329
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bce7e5d196283630800000000000000
+      internalID: 3906915084544765111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_33
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 317
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 619947a9d10fc2b10800000000000000
+      internalID: 1958203947935373590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_34
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 315
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7659fb62f3ec1aaa0800000000000000
+      internalID: -6151408845383035545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_35
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 310
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f6059ac6cbdd1d50800000000000000
+      internalID: 6709760666700678901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_36
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 264
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0feea886e5cee67b0800000000000000
+      internalID: -5228982227105550608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_37
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 262
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c11ca4381b0bd78c0800000000000000
+      internalID: -3999846617576718052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_38
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 256
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8feeada93529863d0800000000000000
+      internalID: -3213157446350868744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_39
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 256
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4782b7328623110800000000000000
+      internalID: 1239167349079700656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_40
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 259
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c93b56b9e32e750800000000000000
+      internalID: 6332692863183461497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_41
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 258
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a3b54328e8e0950800000000000000
+      internalID: 6417223208924822061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_42
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 282
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d56fc0494a62fbf0800000000000000
+      internalID: -292054162973170216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_43
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 278
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71fc20084de2bce70800000000000000
+      internalID: 9136447759266795287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_44
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 278
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30def04636d9487a0800000000000000
+      internalID: -6375798122243691261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_45
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 278
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ee8f24931767e7a0800000000000000
+      internalID: -6347991815967240476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_46
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 265
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f4ff73981034820800000000000000
+      internalID: 2901164273818357582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_47
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 265
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9684f2cb5356996b0800000000000000
+      internalID: -5289085005905049495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_48
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 265
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641c9da8eb7c22280800000000000000
+      internalID: -9069467078383517370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_49
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 263
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64cf73b6484e6f960800000000000000
+      internalID: 7635541475638901830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_50
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 265
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 771bfddb835b176d0800000000000000
+      internalID: -2994413021916319369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_51
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 265
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2acd4d25f3fc24c30800000000000000
+      internalID: 4342260861618150562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_52
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 265
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb3bddd0f5886f50800000000000000
+      internalID: 6874892100741839856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_53
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 231
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f8ebb0635773770800000000000000
+      internalID: 8590463689218232122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_54
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 230
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec75684de603b390800000000000000
+      internalID: -7803886113111311136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_55
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 247
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6467ccd4219f01c0800000000000000
+      internalID: -4535246712229895059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_56
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 254
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 558bf0d0190eb5280800000000000000
+      internalID: -9053395712304236459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_57
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 252
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59217cfe4b72d2390800000000000000
+      internalID: -7841567718111767915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_58
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 254
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae71cabf39f098fb0800000000000000
+      internalID: -4645164412398987286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_59
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 253
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9a628fc4c950b10800000000000000
+      internalID: 1947134268302338548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_60
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 253
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e8154d589e97e70800000000000000
+      internalID: 9113572081962946143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_61
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 255
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22f1e18a56f8b130800000000000000
+      internalID: 3582884372159787566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_62
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 239
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 052f6b8525bd14bf0800000000000000
+      internalID: -341750949981261232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_63
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 252
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa053c13310bb6d50800000000000000
+      internalID: 6731667664521089194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_64
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 252
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37189b5a4595e670800000000000000
+      internalID: 8567418012739049276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_65
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 253
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac64caed3532b2320800000000000000
+      internalID: 2534158058451125962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_66
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 205
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5323428e4f4474d0800000000000000
+      internalID: -3137795841758911651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_67
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 203
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ecb759bd4a37710800000000000000
+      internalID: 1689875548206779962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_68
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 200
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71385c816777d350800000000000000
+      internalID: 6041428685990932859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_69
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 200
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea9952404984ac90800000000000000
+      internalID: -7159446598528165143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_70
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 232
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b1d56e5319d50b0800000000000000
+      internalID: -5738270689515988076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_71
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 239
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a2c64b8d6ccb9c70800000000000000
+      internalID: 8978995052953387681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_72
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 239
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d9631c79a3e58f0800000000000000
+      internalID: -549937681036567261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_73
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 239
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359f2b0117ec55e30800000000000000
+      internalID: 4491723188378728787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_74
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 239
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ccb520b3d824e10800000000000000
+      internalID: 2180460454182898775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_75
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 239
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85450d7689f2edc70800000000000000
+      internalID: 8997681437156070488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_76
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 224
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a5d678286bf26f0800000000000000
+      internalID: -707145944739784043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_77
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 224
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f644200a1fa877a50800000000000000
+      internalID: 6518831756018336879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_78
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 224
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b8da610032e18310800000000000000
+      internalID: 1405653254526392496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_79
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 211
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 936ab34ecb520ee80800000000000000
+      internalID: -8151473832327403975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_80
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 211
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59be3379e833edd0800000000000000
+      internalID: -2458058396302132898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_81
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 211
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e16880647a7f6c90800000000000000
+      internalID: -7174381041123565084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_82
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 179
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98eb7636b6498fd0800000000000000
+      internalID: -2339260783030179683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_83
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 179
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10e7061818259310800000000000000
+      internalID: 1411078142164459551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_84
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 211
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74599a44a94811860800000000000000
+      internalID: 7498920652660380999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_85
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 211
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3fa668cf078f9a0800000000000000
+      internalID: -6199080657186262106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_86
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 211
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6cdf399ebeeb47d0800000000000000
+      internalID: -2932988229919450003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_87
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 198
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2751b782bf5dc3b80800000000000000
+      internalID: -8413614729142266510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_88
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 196
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adaa34323b35e5970800000000000000
+      internalID: 8745519555255970522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_89
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 198
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02639268b3ba5ee50800000000000000
+      internalID: 6838059881374234144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_90
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 197
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1973020b2ff08010800000000000000
+      internalID: 1189230861808269596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_91
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 197
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f3a34c7091477070800000000000000
+      internalID: 8104018143292400631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_92
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 199
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef54142c8936aa490800000000000000
+      internalID: -7734259902310169090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_93
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 182
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 305199a9d526c0000800000000000000
+      internalID: 3485853885732099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_94
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 196
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 887bd31d3d48f9900800000000000000
+      internalID: 693418912921794440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_95
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 196
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28b9aeaba8c28560800000000000000
+      internalID: 7314629384498427948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_96
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 197
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 378153035cf68f090800000000000000
+      internalID: -8000521845315659661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_97
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 129
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7d1dc81ba284e90800000000000000
+      internalID: -7041331075333630026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_98
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 129
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1aee9258a0ebc1c0800000000000000
+      internalID: -4482241990571922913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_99
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 129
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb297f542d2626e0800000000000000
+      internalID: -1862751761627272265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_100
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 182
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5eb48012a6afb60800000000000000
+      internalID: 7780647996341609897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_101
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 182
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe9e9448255b9af0800000000000000
+      internalID: -388623311399117121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_102
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 182
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cffbbf41ebe11b510800000000000000
+      internalID: 1563064347418935292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_103
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 182
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e44663cde3d0620800000000000000
+      internalID: 2741916863664770684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_104
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 182
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9d3413d935a7740800000000000000
+      internalID: 5150521058453084657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_105
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 129
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a594540060dced80800000000000000
+      internalID: -8219966109049907801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_106
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 129
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b90ab536b614eb9d0800000000000000
+      internalID: -2756693992419909477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_107
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 129
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3327a57fe72e37f0800000000000000
+      internalID: -631022988360735940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_108
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 129
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4502811f0c4360960800000000000000
+      internalID: 7567794227125952596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_109
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 122
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc65283066719590800000000000000
+      internalID: -7669218534804329219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_110
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 112
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3840646b584a961d0800000000000000
+      internalID: -3356971153032346493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_111
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 126
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33c4bcc6ab01ad30800000000000000
+      internalID: 4440843518590894907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_112
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 110
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d3b7b45254f2ea0800000000000000
+      internalID: -5895417360722215675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_113
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 119
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b06d45d1bd75ee0800000000000000
+      internalID: -1272307450685027541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_114
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 109
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c202817e602220d40800000000000000
+      internalID: 5549035103916138540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_115
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 11
+        width: 69
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79404c7b4807950a0800000000000000
+      internalID: -6892354039392762729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_116
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 23
+        width: 159
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5f2b6c696584180800000000000000
+      internalID: -9130953038914980380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueScaleTentTree2_117
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 25
+        width: 90
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448ab5e54ce9550a0800000000000000
+      internalID: -6893429088386832316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BlueScaleTentTree2_0: 7848826364151497050
+      BlueScaleTentTree2_1: -6192468273569228438
+      BlueScaleTentTree2_10: -755442595860207022
+      BlueScaleTentTree2_100: 7780647996341609897
+      BlueScaleTentTree2_101: -388623311399117121
+      BlueScaleTentTree2_102: 1563064347418935292
+      BlueScaleTentTree2_103: 2741916863664770684
+      BlueScaleTentTree2_104: 5150521058453084657
+      BlueScaleTentTree2_105: -8219966109049907801
+      BlueScaleTentTree2_106: -2756693992419909477
+      BlueScaleTentTree2_107: -631022988360735940
+      BlueScaleTentTree2_108: 7567794227125952596
+      BlueScaleTentTree2_109: -7669218534804329219
+      BlueScaleTentTree2_11: 4788765218106930462
+      BlueScaleTentTree2_110: -3356971153032346493
+      BlueScaleTentTree2_111: 4440843518590894907
+      BlueScaleTentTree2_112: -5895417360722215675
+      BlueScaleTentTree2_113: -1272307450685027541
+      BlueScaleTentTree2_114: 5549035103916138540
+      BlueScaleTentTree2_115: -6892354039392762729
+      BlueScaleTentTree2_116: -9130953038914980380
+      BlueScaleTentTree2_117: -6893429088386832316
+      BlueScaleTentTree2_12: -8671896754735721661
+      BlueScaleTentTree2_13: 3241475074563308075
+      BlueScaleTentTree2_14: 1644119378114583506
+      BlueScaleTentTree2_15: -4290240166141344348
+      BlueScaleTentTree2_16: -4927857072192835466
+      BlueScaleTentTree2_17: 7844744767553550862
+      BlueScaleTentTree2_18: -2040040116420998293
+      BlueScaleTentTree2_19: 4427699559624965804
+      BlueScaleTentTree2_2: -640030176822326244
+      BlueScaleTentTree2_20: 6056552405366545198
+      BlueScaleTentTree2_21: -1291942769910095603
+      BlueScaleTentTree2_22: -7016304090832776931
+      BlueScaleTentTree2_23: 1523856333428169329
+      BlueScaleTentTree2_24: -6893871515169020049
+      BlueScaleTentTree2_25: -6053705513763570302
+      BlueScaleTentTree2_26: -4846444020162326791
+      BlueScaleTentTree2_27: 6090277405043978588
+      BlueScaleTentTree2_28: -7872955177961668329
+      BlueScaleTentTree2_29: 6673424659223924617
+      BlueScaleTentTree2_3: -3431551113272581091
+      BlueScaleTentTree2_30: -8538460749665598418
+      BlueScaleTentTree2_31: -897419244542120101
+      BlueScaleTentTree2_32: 3906915084544765111
+      BlueScaleTentTree2_33: 1958203947935373590
+      BlueScaleTentTree2_34: -6151408845383035545
+      BlueScaleTentTree2_35: 6709760666700678901
+      BlueScaleTentTree2_36: -5228982227105550608
+      BlueScaleTentTree2_37: -3999846617576718052
+      BlueScaleTentTree2_38: -3213157446350868744
+      BlueScaleTentTree2_39: 1239167349079700656
+      BlueScaleTentTree2_4: -5439381054159450553
+      BlueScaleTentTree2_40: 6332692863183461497
+      BlueScaleTentTree2_41: 6417223208924822061
+      BlueScaleTentTree2_42: -292054162973170216
+      BlueScaleTentTree2_43: 9136447759266795287
+      BlueScaleTentTree2_44: -6375798122243691261
+      BlueScaleTentTree2_45: -6347991815967240476
+      BlueScaleTentTree2_46: 2901164273818357582
+      BlueScaleTentTree2_47: -5289085005905049495
+      BlueScaleTentTree2_48: -9069467078383517370
+      BlueScaleTentTree2_49: 7635541475638901830
+      BlueScaleTentTree2_5: 2195248182473065763
+      BlueScaleTentTree2_50: -2994413021916319369
+      BlueScaleTentTree2_51: 4342260861618150562
+      BlueScaleTentTree2_52: 6874892100741839856
+      BlueScaleTentTree2_53: 8590463689218232122
+      BlueScaleTentTree2_54: -7803886113111311136
+      BlueScaleTentTree2_55: -4535246712229895059
+      BlueScaleTentTree2_56: -9053395712304236459
+      BlueScaleTentTree2_57: -7841567718111767915
+      BlueScaleTentTree2_58: -4645164412398987286
+      BlueScaleTentTree2_59: 1947134268302338548
+      BlueScaleTentTree2_6: 4888187233143503212
+      BlueScaleTentTree2_60: 9113572081962946143
+      BlueScaleTentTree2_61: 3582884372159787566
+      BlueScaleTentTree2_62: -341750949981261232
+      BlueScaleTentTree2_63: 6731667664521089194
+      BlueScaleTentTree2_64: 8567418012739049276
+      BlueScaleTentTree2_65: 2534158058451125962
+      BlueScaleTentTree2_66: -3137795841758911651
+      BlueScaleTentTree2_67: 1689875548206779962
+      BlueScaleTentTree2_68: 6041428685990932859
+      BlueScaleTentTree2_69: -7159446598528165143
+      BlueScaleTentTree2_7: -5622013662628835384
+      BlueScaleTentTree2_70: -5738270689515988076
+      BlueScaleTentTree2_71: 8978995052953387681
+      BlueScaleTentTree2_72: -549937681036567261
+      BlueScaleTentTree2_73: 4491723188378728787
+      BlueScaleTentTree2_74: 2180460454182898775
+      BlueScaleTentTree2_75: 8997681437156070488
+      BlueScaleTentTree2_76: -707145944739784043
+      BlueScaleTentTree2_77: 6518831756018336879
+      BlueScaleTentTree2_78: 1405653254526392496
+      BlueScaleTentTree2_79: -8151473832327403975
+      BlueScaleTentTree2_8: 3726240794569315478
+      BlueScaleTentTree2_80: -2458058396302132898
+      BlueScaleTentTree2_81: -7174381041123565084
+      BlueScaleTentTree2_82: -2339260783030179683
+      BlueScaleTentTree2_83: 1411078142164459551
+      BlueScaleTentTree2_84: 7498920652660380999
+      BlueScaleTentTree2_85: -6199080657186262106
+      BlueScaleTentTree2_86: -2932988229919450003
+      BlueScaleTentTree2_87: -8413614729142266510
+      BlueScaleTentTree2_88: 8745519555255970522
+      BlueScaleTentTree2_89: 6838059881374234144
+      BlueScaleTentTree2_9: -2521516919231921210
+      BlueScaleTentTree2_90: 1189230861808269596
+      BlueScaleTentTree2_91: 8104018143292400631
+      BlueScaleTentTree2_92: -7734259902310169090
+      BlueScaleTentTree2_93: 3485853885732099
+      BlueScaleTentTree2_94: 693418912921794440
+      BlueScaleTentTree2_95: 7314629384498427948
+      BlueScaleTentTree2_96: -8000521845315659661
+      BlueScaleTentTree2_97: -7041331075333630026
+      BlueScaleTentTree2_98: -4482241990571922913
+      BlueScaleTentTree2_99: -1862751761627272265
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
