@@ -64,6 +64,7 @@ public class SaveManager : MonoBehaviour
 
     public GameData CurrentData = new();
 
+    
     private void Awake()
     {
         if (Instance == null)

@@ -37,6 +37,9 @@ public class Interactable : MonoBehaviour
             playerInput.actions["Interact"].performed += OnInteractPerformed;
         }
     }
+    
+    
+    
 
     private void OnTriggerExit2D(Collider2D other)
     {
