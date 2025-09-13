@@ -60,6 +60,9 @@ public class SaveManager : MonoBehaviour
         public int[] inventoryItemCount;
         public List<ObjectStateEntry> objectStates = new();
         public List<QuestProgressEntry> activeQuests = new();
+        
+        public string lastPlayed;          // e.g. "2025-09-09 14:05"
+        public string thumbnailBase64;     // small screenshot as base64 (optional)
     }
 
     public GameData CurrentData = new();
@@ -89,6 +92,12 @@ public class SaveManager : MonoBehaviour
         }
         
         QuestManager.instance.SaveQuestProgress();
+        
+        // timestamp for the slot preview
+        CurrentData.lastPlayed = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+
+        // OPTIONAL: capture a tiny thumbnail (you can hook this up later)
+        // CurrentData.thumbnailBase64 = SaveMenu.CaptureThumbnailBase64(256, 144);
 
 #if UNITY_WEBGL
         if (!NGIO.isReady || !NGIO.hasUser)

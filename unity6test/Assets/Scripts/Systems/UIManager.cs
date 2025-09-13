@@ -48,6 +48,12 @@ public class UIManager : MonoBehaviour
     public ScrollRectAutoScroll scroller;
     public WaitForSeconds seconds;
     
+    [Header("Save Menu")]
+    public GameObject saveMenu;
+    public bool saveMenuOpen = false;
+    public Button initialSaveButton;
+    
+    
 
 
     private void Awake()
@@ -80,6 +86,7 @@ public class UIManager : MonoBehaviour
         CloseInventory(); // Ensure inventory is initially closed
         optionsPanel.SetActive(false);
         pauseMenu.SetActive(false);
+        saveMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false; // Ensure the pause menu is initally closed
         
@@ -96,17 +103,30 @@ public class UIManager : MonoBehaviour
 
     private void OnEscapeUIPerformed(InputAction.CallbackContext context)
     {
-        if(isPaused)
+        if (isPaused)
         {
-            if(optionsPanelActive)
+            if (optionsPanelActive)
             {
                 HideOptions();
+            }
+            else if (saveMenuOpen)
+            {
+                HideSaveMenu();
             }
             else
             {
                 UnPauseGame();
             }
-            
+        }
+
+        if (inventoryOpen)
+        {
+            CloseInventory();
+        }
+
+        if (questingOpen)
+        {
+            HideQuestMenu();
         }
     }
 
@@ -117,6 +137,10 @@ public class UIManager : MonoBehaviour
             if (optionsPanelActive)
             {
                 HideOptions();
+            }
+            else if (saveMenuOpen)
+            {
+                HideSaveMenu();
             }
             else
             {
@@ -207,10 +231,15 @@ public class UIManager : MonoBehaviour
     public void UnPauseGame()
     {
         optionsPanel.SetActive(false);
+        saveMenu.SetActive(false);
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
         playerInput.SwitchCurrentActionMap("Player");
+        
+        optionsPanelActive = false;
+        saveMenuOpen = false; //maybe putting these here is redunant idk it's for my peace of mind
+        buttonsHolder.SetActive(true);
     }
 
     public void ShowOptions()
@@ -227,6 +256,22 @@ public class UIManager : MonoBehaviour
         optionsPanel.SetActive(false);
         initialPauseButton.Select();
         optionsPanelActive = false;
+    }
+
+    public void ShowSaveMenu()
+    {
+        buttonsHolder.SetActive(false);
+        saveMenu.SetActive(true);
+        initialSaveButton.Select();
+        saveMenuOpen = true;
+    }
+
+    public void HideSaveMenu()
+    {
+        buttonsHolder.SetActive(true);
+        saveMenu.SetActive(false);
+        initialPauseButton.Select();
+        saveMenuOpen = false;
     }
 
     public void ShowNotification(string notif, string exclamation)
