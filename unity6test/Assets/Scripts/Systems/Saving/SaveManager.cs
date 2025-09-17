@@ -61,6 +61,7 @@ public class SaveManager : MonoBehaviour
         public List<ObjectStateEntry> objectStates = new();
         public List<QuestProgressEntry> activeQuests = new();
         
+        public string chapter;           // <- NEW: human-readable chapter label ("Chapter 1")
         public string lastPlayed;          // e.g. "2025-09-09 14:05"
         public string thumbnailBase64;     // small screenshot as base64 (optional)
     }
@@ -95,6 +96,11 @@ public class SaveManager : MonoBehaviour
         
         // timestamp for the slot preview
         CurrentData.lastPlayed = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+
+        if (GameManager.instance.CurrentLevelController != null)
+        {
+            CurrentData.chapter = GameManager.instance.CurrentLevelController.chapter;
+        }
 
         // OPTIONAL: capture a tiny thumbnail (you can hook this up later)
         // CurrentData.thumbnailBase64 = SaveMenu.CaptureThumbnailBase64(256, 144);

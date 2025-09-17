@@ -30,7 +30,7 @@ public class LevelTransition : MonoBehaviour
         }
         else
         {
-            offset.y = side == Side.Top ? -positionOffset.y : positionOffset.y;
+            offset.y = side == Side.Top ? positionOffset.y : -positionOffset.y;
             offset.x = centerPlayer ? 0 : playerPos.x - transform.position.x;
         }
 

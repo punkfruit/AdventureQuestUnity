@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
+using System.Collections;
 
 public class SaveMenuButton : MonoBehaviour
 {
@@ -9,11 +9,11 @@ public class SaveMenuButton : MonoBehaviour
     public int slotId = 1;
 
     [Header("UI Refs")]
-    public TMP_Text titleText;            // e.g. "Chapter 1" or scene name
-    public TMP_Text subtitleText;         // e.g. "Save Slot 1" or "Last played"
+    public TMP_Text titleText;            // "Chapter 1" or scene name
+    public TMP_Text subtitleText;         // "Save Slot 1 • Last played ..."
     public RawImage thumbnail;
-    public Transform heartsContainer;     // empty parent under your "Hearts" GridLayoutGroup
-    public GameObject heartPrefab;        // a small heart icon prefab
+    public Transform heartsContainer;     // parent under "Hearts" GridLayoutGroup
+    public GameObject heartPrefab;        // heart icon prefab
     public Button saveButton;
     public Button loadButton;
     public Button deleteButton;
@@ -23,7 +23,6 @@ public class SaveMenuButton : MonoBehaviour
 
     private void Awake()
     {
-        // default wiring (optional)
         if (saveButton)  saveButton.onClick.AddListener(OnClickSave);
         if (loadButton)  loadButton.onClick.AddListener(OnClickLoad);
         if (deleteButton) deleteButton.onClick.AddListener(OnClickDelete);
@@ -49,17 +48,16 @@ public class SaveMenuButton : MonoBehaviour
     {
         hasData = true;
 
-        // Title: use "chapter" if you later add it; for now, show scene or your placeholder
-        if (titleText)    titleText.text = string.IsNullOrEmpty(preview.chapter) ? preview.sceneName : preview.chapter;
+        if (titleText)
+            titleText.text = string.IsNullOrEmpty(preview.chapter) ? "Unknown Chapter" : preview.chapter;
 
-        // Subtitle: show both slot label and last played if available
+
         if (subtitleText)
         {
             var last = string.IsNullOrEmpty(preview.lastPlayed) ? "" : $" • {preview.lastPlayed}";
             subtitleText.text = $"Save Slot {slotId}{last}";
         }
 
-        // Thumbnail
         if (thumbnail)
         {
             if (preview.thumbnail != null)
@@ -73,7 +71,7 @@ public class SaveMenuButton : MonoBehaviour
             }
         }
 
-        // Hearts = current player health
+        // Hearts: show current player health as half-hearts count
         RenderHearts(preview.playerHealth / 2);
 
         if (loadButton)   loadButton.interactable = true;
@@ -114,37 +112,81 @@ public class SaveMenuButton : MonoBehaviour
             SaveManager.Instance.LoadGame(slotId);
             UIManager.Instance.UnPauseGame();
         }
-            
     }
 
     public void OnClickDelete()
     {
 #if UNITY_WEBGL
-        var clear = new NewgroundsIO.components.CloudSave.clearSlot() { id = slotId };
+        if (!this) return;
 
-        StartCoroutine(NGIO.ngioCore.ExecuteComponent(clear, (result) =>
-        {
-            if (!this) return; // button was destroyed/row closed
+        if (deleteButton) deleteButton.interactable = false;
 
-            if (result.success)
-            {
-                ShowEmpty();
-                UIManager.Instance.ShowNotification($"Cleared Slot {slotId}", "!");
-            }
-            else
-            {
-                UIManager.Instance.ShowNotification("Delete failed", "!");
-            }
-        }));
+        StartCoroutine(DeleteCloudSlotRoutine());
 #else
-    string fullPath = $"{Application.persistentDataPath}/save_{slotId}.json";
-    if (System.IO.File.Exists(fullPath))
-    {
-        System.IO.File.Delete(fullPath);
-        ShowEmpty();
-        UIManager.Instance.ShowNotification($"Cleared Slot {slotId}", "!");
-    }
+        string fullPath = $"{Application.persistentDataPath}/save_{slotId}.json";
+        if (System.IO.File.Exists(fullPath))
+        {
+            System.IO.File.Delete(fullPath);
+            ShowEmpty();
+            UIManager.Instance.ShowNotification($"Cleared Slot {slotId}", "!");
+        }
 #endif
     }
 
+#if UNITY_WEBGL
+    private IEnumerator DeleteCloudSlotRoutine()
+    {
+        int attempts = 0;
+        const int maxAttempts = 2; // one retry on transient transport error
+        bool success = false;
+
+        while (attempts < maxAttempts && !success)
+        {
+            attempts++;
+
+            var clear = new NewgroundsIO.components.CloudSave.clearSlot() { id = slotId };
+            bool finished = false;
+            bool callSuccess = false;
+
+            yield return NGIO.ngioCore.ExecuteComponent(clear, (result) =>
+            {
+                if (!this) return; // row destroyed
+                callSuccess = (result != null && result.success);
+                finished = true;
+            });
+
+            int safety = 0;
+            while (!finished && safety++ < 120) yield return null;
+
+            success = callSuccess;
+
+            if (!success)
+            {
+                // Small backoff for hiccups like curl 65
+                yield return new WaitForSecondsRealtime(0.3f);
+            }
+        }
+
+        if (this)
+        {
+            if (success)
+            {
+                ShowEmpty();
+                UIManager.Instance.ShowNotification($"Cleared Slot {slotId}", "!");
+
+                // Ask menu to refresh after a short delay; its cooldown avoids stale reads
+                if (SaveMenu.Instance)
+                {
+                    SaveMenu.Instance.Invoke(nameof(SaveMenu.Instance.RefreshAllSlots), 0.15f);
+                }
+            }
+            else
+            {
+                UIManager.Instance.ShowNotification("Delete failed — try again", "!");
+            }
+
+            if (deleteButton) deleteButton.interactable = true;
+        }
+    }
+#endif
 }

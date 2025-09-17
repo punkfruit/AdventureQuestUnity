@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public FacingDir Direction = FacingDir.DOWN;
     public EnemyStates State = EnemyStates.IDLE;
     
-    public GameObject deathEffect;
+    public GameObject deathEffect; //simple explosion animation that instantiates where the enemy was upon death
 
     public float moveSpeed = 2f;
     public float minMoveTime = 1f;

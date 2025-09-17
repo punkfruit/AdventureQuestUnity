@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     
     public bool onTitleScreen = false;
 
+    public LevelController CurrentLevelController;
+
     private void Awake()
     {
         if (instance != null)

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 public class SavePreview
@@ -20,6 +21,12 @@ public class SaveMenu : MonoBehaviour
     public int totalSlots = 3;
     public SaveMenuButton[] slotRows; // assign in Inspector
 
+    // Robustness state
+    private int menuVersion = 0;
+    private readonly Dictionary<int, bool> slotRefreshInFlight = new();
+    private readonly Dictionary<int, float> slotCooldownUntil = new();
+    private const float SlotCooldownSeconds = 0.5f;
+
     private void Awake()
     {
         Instance = this;
@@ -27,13 +34,24 @@ public class SaveMenu : MonoBehaviour
 
     private void OnEnable()
     {
+        menuVersion++;
+        // Try immediately; if NGIO isn’t ready yet, we start a small waiter
         RefreshAllSlots();
+#if UNITY_WEBGL
+        StartCoroutine(WaitForNgioAndRefresh(menuVersion));
+#endif
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        slotRefreshInFlight.Clear();
+        slotCooldownUntil.Clear();
     }
 
     public void RefreshAllSlots()
     {
         if (!isActiveAndEnabled) return;
-
         if (slotRows == null || slotRows.Length == 0) return;
 
         for (int i = 0; i < slotRows.Length; i++)
@@ -42,8 +60,19 @@ public class SaveMenu : MonoBehaviour
             if (row == null) continue;
 
             int slotId = row.slotId;
+
+            // no duplicate refreshes for same slot
+            if (slotRefreshInFlight.TryGetValue(slotId, out var busy) && busy) continue;
+            if (slotCooldownUntil.TryGetValue(slotId, out var until) && Time.unscaledTime < until) continue;
+
 #if UNITY_WEBGL
-            StartCoroutine(RefreshCloudSlot(row, slotId));
+            // If NGIO not ready yet, show empty for now (prevents NRE) — waiter will repopulate when ready.
+            if (!IsNgioCloudReady())
+            {
+                row.ShowEmpty();
+                continue;
+            }
+            StartCoroutine(RefreshCloudSlot(row, slotId, menuVersion));
 #else
             RefreshLocalSlot(row, slotId);
 #endif
@@ -51,59 +80,109 @@ public class SaveMenu : MonoBehaviour
     }
 
 #if UNITY_WEBGL
-    private IEnumerator RefreshCloudSlot(SaveMenuButton row, int slotId)
+    /// <summary>Polls briefly for NGIO readiness, then refreshes once ready.</summary>
+    private IEnumerator WaitForNgioAndRefresh(int version)
     {
-        if (row == null) yield break;
+        // Fast path: if already ready, bail.
+        if (IsNgioCloudReady()) yield break;
 
-        var load = new NewgroundsIO.components.CloudSave.loadSlot() { id = slotId };
-        bool callbackReturned = false;
-        NewgroundsIO.objects.SaveSlot slot = null;
-
-        // Kick off loadSlot
-        yield return NGIO.ngioCore.ExecuteComponent(load, (response) =>
+        // Poll for up to ~3 seconds without spamming
+        float start = Time.unscaledTime;
+        while (Time.unscaledTime - start < 3f)
         {
-            if (response.success &&
-                response.result is NewgroundsIO.results.CloudSave.loadSlot lr &&
-                lr.slot != null &&
-                lr.slot.hasData)
+            if (!this || !isActiveAndEnabled || version != menuVersion) yield break;
+            if (IsNgioCloudReady())
             {
-                slot = lr.slot;
+                RefreshAllSlots();
+                yield break;
             }
-            callbackReturned = true;
-        });
-
-        // Wait for the callback to return
-        while (!callbackReturned) yield return null;
-
-        // Early out if row/menu got destroyed/disabled
-        if (this == null || !isActiveAndEnabled || row == null || !row.isActiveAndEnabled)
-            yield break;
-
-        if (slot == null || !slot.hasData)
-        {
-            row.ShowEmpty();
-            yield break;
+            yield return new WaitForSecondsRealtime(0.15f);
         }
-
-        // Fetch the slot data on THIS MonoBehaviour (not the row) to avoid NREs if row disappears
-        yield return GetDataAndShow(row, slot);
+        // If still not ready after 3s, we stay showing “Empty” until user reopens menu or NGIO becomes ready later.
     }
 
-    private IEnumerator GetDataAndShow(SaveMenuButton row, NewgroundsIO.objects.SaveSlot slot)
+    /// <summary>Returns true when it’s safe to hit CloudSave.</summary>
+    private bool IsNgioCloudReady()
+    {
+        // ngioCore must exist, wrapper initialized, and a logged-in user (CloudSave requires a session)
+        return NGIO.isInitialized
+            && NGIO.ngioCore != null
+            && NGIO.hasUser; // (You could also allow NGIO.hasSession, but CloudSave requires login.)
+    }
+
+    private IEnumerator RefreshCloudSlot(SaveMenuButton row, int slotId, int version)
+    {
+        if (row == null || !isActiveAndEnabled) yield break;
+
+        slotRefreshInFlight[slotId] = true;
+        try
+        {
+            // Double-check readiness in case state changed after we queued
+            if (!IsNgioCloudReady())
+            {
+                row.ShowEmpty();
+                yield break;
+            }
+
+            var load = new NewgroundsIO.components.CloudSave.loadSlot() { id = slotId };
+
+            bool callbackReturned = false;
+            NewgroundsIO.objects.SaveSlot slot = null;
+
+            // Execute with a callback; response can be null on transport error
+            yield return NGIO.ngioCore.ExecuteComponent(load, (response) =>
+            {
+                if (this == null || !isActiveAndEnabled || version != menuVersion) return;
+
+                if (response != null &&
+                    response.success &&
+                    response.result is NewgroundsIO.results.CloudSave.loadSlot lr &&
+                    lr.slot != null &&
+                    lr.slot.hasData)
+                {
+                    slot = lr.slot;
+                }
+                callbackReturned = true;
+            });
+
+            // wait for callback (defensive)
+            int safety = 0;
+            while (!callbackReturned && safety++ < 120) yield return null;
+
+            if (this == null || !isActiveAndEnabled || version != menuVersion || row == null || !row.isActiveAndEnabled)
+                yield break;
+
+            if (slot == null || !slot.hasData)
+            {
+                row.ShowEmpty();
+                yield break;
+            }
+
+            // Fetch JSON string on THIS MonoBehaviour so if the row disappears, we don't NRE
+            yield return GetDataAndShow(row, slot, version);
+        }
+        finally
+        {
+            slotRefreshInFlight[slotId] = false;
+            slotCooldownUntil[slotId] = Time.unscaledTime + SlotCooldownSeconds;
+        }
+    }
+
+    private IEnumerator GetDataAndShow(SaveMenuButton row, NewgroundsIO.objects.SaveSlot slot, int version)
     {
         bool done = false;
         string json = null;
 
-        // Request the string
         yield return slot.GetData((data) =>
         {
             json = data;
             done = true;
         });
 
-        while (!done) yield return null;
+        int safety = 0;
+        while (!done && safety++ < 120) yield return null;
 
-        if (this == null || !isActiveAndEnabled || row == null || !row.isActiveAndEnabled)
+        if (this == null || !isActiveAndEnabled || version != menuVersion || row == null || !row.isActiveAndEnabled)
             yield break;
 
         if (string.IsNullOrEmpty(json))
@@ -149,11 +228,11 @@ public class SaveMenu : MonoBehaviour
 
             return new SavePreview
             {
-                sceneName = string.IsNullOrEmpty(data.currentScene) ? "Unknown Area" : data.currentScene,
-                chapter   = null, // set when you add a chapter field
-                lastPlayed = data.lastPlayed,
+                sceneName    = string.IsNullOrEmpty(data.currentScene) ? "Unknown Area" : data.currentScene,
+                chapter      = string.IsNullOrEmpty(data.chapter) ? "Unknown Chapter" : data.chapter,
+                lastPlayed   = data.lastPlayed,
                 playerHealth = data.playerHealth,
-                thumbnail = DecodeBase64Texture(data.thumbnailBase64)
+                thumbnail    = DecodeBase64Texture(data.thumbnailBase64)
             };
         }
         catch

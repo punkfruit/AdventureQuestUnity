@@ -14,6 +14,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Area0/Area02.unity
     guid: f6c18391a75913e48b1b3ee30acf8011
+  - enabled: 1
+    path: Assets/Scenes/Area0/NC-OW-00-00.unity
+    guid: df57ba456c70f473f97520c139b6efed
+  - enabled: 1
+    path: Assets/Scenes/Area0/NC-WT-00-00.unity
+    guid: a5c3f02186cbd4ef282ca0359d78bc08
+  - enabled: 1
+    path: Assets/Scenes/Area0/NC-WT-00-01.unity
+    guid: 3c54f9f0a2fc648edbd42d1e19cad1d1
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a4536c8a376619845904a3daca69d55b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 64d9b136b04cd0b46a443395bef3ff33, type: 3}
