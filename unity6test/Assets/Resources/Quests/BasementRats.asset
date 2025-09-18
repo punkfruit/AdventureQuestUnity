@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64492948addc74024a81c5610ae67c82, type: 3}
+  m_Name: BasementRats
+  m_EditorClassIdentifier: 
+  questID: 1
+  questName: Basement Rats
+  questDescription: Kill all the rats in my basement
+  questIcon: {fileID: -1441854706847985548, guid: ab7b5242576684c3f85ca8cfadae2a65, type: 3}
+  questElements:
+  - elementName: check the basement
+    elementDescription: whats going on down there?
+    elementComplete: 0
+  - elementName: kill rats
+    elementDescription: its full of rats! lets genocide them
+    elementComplete: 0

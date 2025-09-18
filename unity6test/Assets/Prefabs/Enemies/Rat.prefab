@@ -92,9 +92,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4651509784619958813}
   - component: {fileID: 5796708679684970069}
-  - component: {fileID: 6661362914383646207}
   - component: {fileID: 3972408490150860214}
   - component: {fileID: 5566730529991487502}
+  - component: {fileID: 2751404912211654934}
+  - component: {fileID: 5985863368394800696}
+  - component: {fileID: 7576743144807843393}
   m_Layer: 7
   m_Name: Rat
   m_TagString: Untagged
@@ -142,31 +144,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6661362914383646207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4945272392593324422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e0a8748409fab45b4d1fa974d74305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  Direction: 1
-  State: 0
-  deathEffect: {fileID: 3249483238911486538, guid: de2ccd276482545798e530a0f714bd64, type: 3}
-  moveSpeed: 1
-  minMoveTime: 0.3
-  maxMoveTime: 1
-  minWaitTime: 0.5
-  maxWaitTime: 2
-  knockbackForce: 3
-  direction: {x: 0, y: 0}
-  anim: {fileID: 5796708679684970069}
-  hitbox: {fileID: 1366986238348999177}
 --- !u!50 &3972408490150860214
 Rigidbody2D:
   serializedVersion: 5
@@ -224,12 +201,63 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.06, y: -0.15}
   m_Radius: 0.19
+--- !u!114 &2751404912211654934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945272392593324422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d0055f528c84377a4f3302abf8d179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  anim: {fileID: 5796708679684970069}
+--- !u!114 &5985863368394800696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945272392593324422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be14b069986aa4e3e997a9a6e4b148a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behavior: 0
+  motor: {fileID: 2751404912211654934}
+  target: {fileID: 0}
+  patrolPoints: []
+  moveTimeMin: 1
+  moveTimeMax: 3
+  waitTimeMin: 0.5
+  waitTimeMax: 2
+--- !u!114 &7576743144807843393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945272392593324422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3438397ad26046c0ade5c3d2d2c04f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  knockbackForce: 5
+  stunTime: 0.3
+  deathEffect: {fileID: 3249483238911486538, guid: de2ccd276482545798e530a0f714bd64, type: 3}
+  motor: {fileID: 2751404912211654934}
 --- !u!1 &6657771309247991289
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,9 +306,9 @@ MonoBehaviour:
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6661362914383646207}
-        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
-        m_MethodName: TakeDamage
+      - m_Target: {fileID: 7576743144807843393}
+        m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
+        m_MethodName: Hit
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
