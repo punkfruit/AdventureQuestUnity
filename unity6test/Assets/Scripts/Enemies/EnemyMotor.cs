@@ -34,7 +34,7 @@ public class EnemyMotor : MonoBehaviour
         var v = rb.linearVelocity;
         anim?.SetFloat("dirX", v.x);
         anim?.SetFloat("dirY", v.y);
-        anim?.SetFloat("speed", v.sqrMagnitude);
+        //anim?.SetFloat("speed", v.sqrMagnitude);
     }
 
     void FixedUpdate()

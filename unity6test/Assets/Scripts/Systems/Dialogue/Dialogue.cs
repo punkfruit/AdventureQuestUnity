@@ -9,6 +9,8 @@ public class Dialogue
     public Sentence[] sentences;
 }
 
+
+/*
 [System.Serializable]
 public class Sentence
 {
@@ -24,3 +26,4 @@ public class Sentence
         text = sentence;
     }
 }
+*/

@@ -79,6 +79,7 @@ public class DialogueManager : MonoBehaviour
             currentSentence = sentences.Dequeue();
             nameText.text = currentSentence.characterName;
             //faceIcon.sprite = currentSentence.characterIcon;
+            currentSentence.Execute();
             StartCoroutine(TypeSentence(currentSentence.text));
         }
     }
