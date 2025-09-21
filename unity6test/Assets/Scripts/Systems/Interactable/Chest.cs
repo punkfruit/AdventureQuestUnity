@@ -16,7 +16,7 @@ public class Chest : MonoBehaviour
     {
        
 
-        if (baseInteractable.state == false)
+        if (baseInteractable.state == false) //if the chest is closed
         {
             int chance = (int)Random.Range(0, potentialItems.Length);
             finalItem = potentialItems[chance];

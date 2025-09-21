@@ -157,7 +157,7 @@ public class SaveManager : MonoBehaviour
             allowedToLoad = true;
         }));
 #else
-        string json = JsonUtility.ToJson(CurrentData, true);
+        string json = JsonConvert.SerializeObject(CurrentData, Formatting.Indented);
         string fullPath = $"{savePath}_{slotId}.json";
         File.WriteAllText(fullPath, json);
         Debug.Log($"Game Saved to: {fullPath}");
@@ -238,7 +238,7 @@ public class SaveManager : MonoBehaviour
         if (File.Exists(fullPath))
         {
             string json = File.ReadAllText(fullPath);
-            CurrentData = JsonUtility.FromJson<GameData>(json);
+            CurrentData = JsonConvert.DeserializeObject<GameData>(json);
             ApplyGameData();
             Debug.Log($"Game Loaded from: {fullPath}");
             UIManager.Instance.ShowNotification($"Game Loaded (Slot {slotId})", "!");
