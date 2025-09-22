@@ -95,7 +95,7 @@ public class HealthManager : MonoBehaviour
         SaveManager.Instance.CurrentData.playerHealth = health;
     }
 
-    public void TakeDamage(int damage)
+    public bool TakeDamage(int damage)
     {
         health -= damage;
         health = Mathf.Clamp(health, 0, maxHealth);
@@ -104,8 +104,11 @@ public class HealthManager : MonoBehaviour
 
         if (health <= 0)
         {
-            // Handle player death later
+            
+            //do something with the ui
+            return true;
         }
+        return false;
     }
 
     public void SetHealth(int value)
@@ -130,6 +133,11 @@ public class HealthManager : MonoBehaviour
         InitializeHearts();
         //UpdateHealthDisplay();
         StartCoroutine(DelayedUpdateHealthDisplay());
+        
+        PlayerController.instance.anim.SetBool("Dead", false);
+        PlayerController.instance.canMove = true;
+        PlayerController.instance.canMove = true;
+        PlayerController.instance.playerState = PlayerStates.IDLE;
     }
 
     IEnumerator DelayedUpdateHealthDisplay()

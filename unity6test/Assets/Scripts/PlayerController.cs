@@ -164,14 +164,20 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(HurtBox hurtBox)
     {
-        if(!DialogueManager.instance.dialogueIsPlaying)//if theres dialogue playing the player is invincable! lol!
+        if(!DialogueManager.instance.dialogueIsPlaying)//if theres dialogue playing the player is invincible! lol!
         {
             StopAllCoroutines();
             playerState = PlayerStates.STUN;
             theRB.linearVelocity = Vector2.zero;
 
             // Reduce health
-            HealthManager.instance.TakeDamage(hurtBox.damageValue);
+            if (HealthManager.instance.TakeDamage(hurtBox.damageValue))
+            {
+                anim.SetBool("Dead", true);
+                canMove = false;
+                canMove = false;
+                return;
+            }
             anim.SetTrigger("Flash"); // Flash player character red
 
             // Calculate knockback direction
