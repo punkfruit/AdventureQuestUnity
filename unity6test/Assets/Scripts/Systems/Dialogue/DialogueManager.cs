@@ -61,18 +61,19 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
-    public void DisplayNextSentence()
+    public bool DisplayNextSentence() //returns true when dialogue is done
     {
         if (sentences.Count == 0 && !sentenceIsTyping)
         {
             EndDialogue();
-            return;
+            return true;
         }
 
         StopAllCoroutines();
         if (sentenceIsTyping)
         {
             ShowSentence(currentSentence.text);
+            return false;
         }
         else
         {
@@ -81,6 +82,7 @@ public class DialogueManager : MonoBehaviour
             //faceIcon.sprite = currentSentence.characterIcon;
             currentSentence.Execute();
             StartCoroutine(TypeSentence(currentSentence.text));
+            return false;
         }
     }
 

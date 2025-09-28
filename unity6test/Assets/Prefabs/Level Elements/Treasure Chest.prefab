@@ -265,6 +265,7 @@ MonoBehaviour:
   state: 0
   inRange: 0
   savable: 1
+  triggerOnEnter: 0
   indicator: {fileID: 4674929508671067445}
   OnInteractPerformedEvent:
     m_PersistentCalls:
@@ -287,7 +288,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1633449896173016549}
         m_TargetAssemblyTypeName: Chest, Assembly-CSharp
         m_MethodName: ApplyState
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

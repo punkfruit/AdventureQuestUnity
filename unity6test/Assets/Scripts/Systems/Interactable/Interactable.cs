@@ -9,10 +9,13 @@ public class Interactable : MonoBehaviour
 
     public bool inRange = false;//weather the player is in range of the object
     public bool savable = true;
+    public bool triggerOnEnter = false;
+    //public BoxCollider2D boxCollider;
+    public Collider2D collider2D;
     public GameObject indicator;
 
     public UnityEvent OnInteractPerformedEvent;
-    public UnityEvent ApplyStateEvent;
+    public UnityEvent<bool> ApplyStateEvent;
     public PlayerInput playerInput;
 
     private void Start()
@@ -23,7 +26,9 @@ public class Interactable : MonoBehaviour
             ApplyState(state);
         }
         
-        indicator.SetActive(false);
+        if(!triggerOnEnter)
+            indicator.SetActive(false);
+        
         playerInput = GameManager.instance.playerInput;
         //SaveManager.Instance.SetObjectState(uniqueID, state);
     }
@@ -32,9 +37,19 @@ public class Interactable : MonoBehaviour
     {
         if(other.tag == "Player" && !state)
         {
-            inRange = true;
-            indicator.SetActive(true);
-            playerInput.actions["Interact"].performed += OnInteractPerformed;
+            if (triggerOnEnter)
+            {
+                inRange = true;
+                playerInput.actions["Interact"].performed += OnInteractPerformed;
+                OnInteractPerformedEvent?.Invoke();
+            }
+            else
+            {
+                inRange = true;
+                indicator.SetActive(true);
+                playerInput.actions["Interact"].performed += OnInteractPerformed;
+            }
+            
         }
     }
     
@@ -46,15 +61,17 @@ public class Interactable : MonoBehaviour
         if (other.tag == "Player")
         {
             inRange = false;
-            indicator.SetActive(false);
+            
             playerInput.actions["Interact"].performed -= OnInteractPerformed;
+            if(indicator != null)
+                indicator.SetActive(false);
         }
     }
 
     public void ApplyState(bool state)
     {
         // Replace this with logic that reflects the state, like animation or enabling/disabling a collider
-        ApplyStateEvent?.Invoke();
+        ApplyStateEvent?.Invoke(state);
         Debug.Log($"Applying state to {uniqueID}: {state}");
 
     }

@@ -41,9 +41,9 @@ public class Chest : MonoBehaviour
     }
 
 
-    public void ApplyState() //listening to the base interactable apply state event
+    public void ApplyState(bool stat) //listening to the base interactable apply state event
     {
-        if(baseInteractable.state == true)
+        if(stat == true)
         {
             spr.sprite = open;
         }
