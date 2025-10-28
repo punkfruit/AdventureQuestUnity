@@ -1,10 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
     public Interactable baseInteractable;
     public Dialogue dialogue;
-    
+    public SpriteRenderer spr;
    
     
 
@@ -42,10 +43,19 @@ public class DialogueTrigger : MonoBehaviour
         if(stat == true)
         {
             baseInteractable.collider2D.enabled = false;
+            if (spr != null)
+            {
+                spr.enabled = false;
+            }
+                
         }
         else
         {
             baseInteractable.collider2D.enabled = true;
+            if (spr != null)
+            {
+                spr.enabled = true;
+            }
         }
     }
 

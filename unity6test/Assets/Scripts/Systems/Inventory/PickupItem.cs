@@ -5,6 +5,7 @@ public class PickupItem : MonoBehaviour
 {
     public Item item;
     public UnityEvent OnPickup;
+    public AudioClip pickupSound;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,7 +16,7 @@ public class PickupItem : MonoBehaviour
             {
                 OnPickup.Invoke();
                 Destroy(gameObject);
-                //play pickup sound
+                AudioManager.instance.PlaySoundFXClip(pickupSound, transform, 1f);
             }
             else
             {

@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
     private bool prioritizeXAxis;
     public FacingDirection faceDirection = FacingDirection.UP;
+    public AudioClip swordSwoosh;
 
     public WaitForSeconds stunTime = new WaitForSeconds(0.2f);
 
@@ -180,6 +181,7 @@ public class PlayerController : MonoBehaviour
         if (playerState != PlayerStates.ATTACK && canMove && canAttack && anim != null)
         {
             anim.SetTrigger(Staff);
+            AudioManager.instance.PlaySoundFXClip(swordSwoosh, transform, 1f);
             playerState = PlayerStates.ATTACK;
         }
     }

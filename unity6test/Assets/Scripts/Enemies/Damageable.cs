@@ -7,6 +7,7 @@ public class Damageable : MonoBehaviour
     public float stunTime = 0.3f;
     public GameObject deathEffect;
     public EnemyMotor motor; // assign
+    public AudioClip damageSound;
 
     private int _health;
 
@@ -15,6 +16,7 @@ public class Damageable : MonoBehaviour
     public void Hit(HurtBox hb) //assigned in inspector as a "dynamic" field, cant have more than 1 fields to pass in
     {
         _health -= hb.damageValue;
+        AudioManager.instance.PlaySoundFXClip(damageSound, transform, 1f);
         if (_health <= 0) { Die(); return; }
 
         if (motor != null)

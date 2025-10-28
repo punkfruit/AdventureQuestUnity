@@ -258,6 +258,7 @@ MonoBehaviour:
   stunTime: 0.3
   deathEffect: {fileID: 3249483238911486538, guid: de2ccd276482545798e530a0f714bd64, type: 3}
   motor: {fileID: 2751404912211654934}
+  damageSound: {fileID: 8300000, guid: ff2b78408a08e4b79b603f2718077756, type: 3}
 --- !u!1 &6657771309247991289
 GameObject:
   m_ObjectHideFlags: 0

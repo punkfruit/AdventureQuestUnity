@@ -146,6 +146,7 @@ MonoBehaviour:
   playerInput: {fileID: 0}
   canMove: 1
   faceDirection: 2
+  swordSwoosh: {fileID: 8300000, guid: ffd49d862a6f8e04f84590d6eaddb1e7, type: 3}
   flash: 0
   knockbackForce: 7
 --- !u!1 &2604104974628694634

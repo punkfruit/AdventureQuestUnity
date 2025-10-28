@@ -135,6 +135,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: b18c8454e0323814294acb33dbd98770, type: 2}
+  OnPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  pickupSound: {fileID: 8300000, guid: 9a1c7b6db96802846a9b293e747a2e38, type: 3}
 --- !u!58 &2380346888833673224
 CircleCollider2D:
   m_ObjectHideFlags: 0

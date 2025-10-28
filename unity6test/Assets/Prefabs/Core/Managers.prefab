@@ -1938,13 +1938,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 840607677058679773}
   m_HandleRect: {fileID: 1609477398097865318}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.178
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 704368835926910923}
+        m_TargetAssemblyTypeName: SoundMixerManager, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1080755417042654201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,6 +2475,7 @@ MonoBehaviour:
   player: {fileID: 0}
   uiCanvas: {fileID: 5907976128671415354}
   onTitleScreen: 0
+  CurrentLevelController: {fileID: 0}
 --- !u!114 &4630207578135468595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3627,13 +3640,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 930466351866051429}
   m_HandleRect: {fileID: 310518702455105438}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.178
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 704368835926910923}
+        m_TargetAssemblyTypeName: SoundMixerManager, Assembly-CSharp
+        m_MethodName: SetMasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2091438398335659556
 GameObject:
   m_ObjectHideFlags: 0
@@ -4926,6 +4951,7 @@ MonoBehaviour:
     inventoryItems: 
     inventoryItemCount: 
     objectStates: []
+    chapter: 
     lastPlayed: 
     thumbnailBase64: 
 --- !u!1 &2658977865449187588
@@ -7582,6 +7608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2837371659667811509}
   - component: {fileID: 2143426350466762233}
+  - component: {fileID: 704368835926910923}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -7617,6 +7644,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundFXObject: {fileID: 5147185788550628579, guid: 0c55f2950a2d8484cbf3d3de38324b8c, type: 3}
+--- !u!114 &704368835926910923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3597329873358629612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a697e71f87ba4437cbb74fb8f6a8e765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 1f84c53149886c34da160cb62ad1be5b, type: 2}
+  masterSlider: {fileID: 727272525883596844}
+  musicSlider: {fileID: 8045259785157177493}
+  sfxSlider: {fileID: 3900349263474379465}
 --- !u!1 &3609921144980066819
 GameObject:
   m_ObjectHideFlags: 0
@@ -10525,13 +10568,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1275698634274135497}
   m_HandleRect: {fileID: 1062158376598681696}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.178
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 704368835926910923}
+        m_TargetAssemblyTypeName: SoundMixerManager, Assembly-CSharp
+        m_MethodName: SetSFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5183989853740508047
 GameObject:
   m_ObjectHideFlags: 0

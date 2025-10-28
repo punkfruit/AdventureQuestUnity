@@ -64,6 +64,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  pickupSound: {fileID: 8300000, guid: 9a1c7b6db96802846a9b293e747a2e38, type: 3}
 --- !u!58 &6938717688832003285
 CircleCollider2D:
   m_ObjectHideFlags: 0
