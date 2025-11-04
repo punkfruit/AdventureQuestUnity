@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Area0/NC-OW-00-01.unity
     guid: 9277dcfcde65747a8be41beb0dab9303
+  - enabled: 1
+    path: Assets/Scenes/Area0/NC-OW-00-02.unity
+    guid: e0748d0bcb638476ca4401e082b8b2bc
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a4536c8a376619845904a3daca69d55b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 64d9b136b04cd0b46a443395bef3ff33, type: 3}
