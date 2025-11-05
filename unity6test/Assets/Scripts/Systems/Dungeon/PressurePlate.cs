@@ -12,7 +12,7 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Statue"))
         {
             thingsOnPlate++;
             
@@ -29,7 +29,7 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Statue"))
         {
             thingsOnPlate--;
             

@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 200377408}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.38, z: 0}
+  m_LocalPosition: {x: -5.99, y: 1.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -263,6 +263,9 @@ GameObject:
   - component: {fileID: 371673466}
   - component: {fileID: 371673465}
   - component: {fileID: 371673467}
+  - component: {fileID: 371673468}
+  - component: {fileID: 371673470}
+  - component: {fileID: 371673469}
   m_Layer: 0
   m_Name: BarredDoor
   m_TagString: Untagged
@@ -358,6 +361,89 @@ MonoBehaviour:
   sortTransform: {fileID: 340342595}
   offset: 0
   sortType: 0
+--- !u!61 &371673468
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371673464}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.4989364}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.0698843, y: 1.0021272}
+  m_EdgeRadius: 0
+--- !u!95 &371673469
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371673464}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 55ecb7d214c92453f81edc2f0da5a101, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &371673470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371673464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf21cbbe1253e46d4bd6863b64d05316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorCollider: {fileID: 371673468}
+  anim: {fileID: 371673469}
+  doorSound: {fileID: 8300000, guid: 4e7159ed4c480457ba47dfae6cef25e6, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,10 +568,34 @@ MonoBehaviour:
   unpressed: {fileID: -341382816, guid: 5960c49fb069b4442a8988947cbf8615, type: 3}
   OnPressurePlatePressed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 371673470}
+        m_TargetAssemblyTypeName: BarredDoor, Assembly-CSharp
+        m_MethodName: OpenDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnPressurePlateUnpressed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 371673470}
+        m_TargetAssemblyTypeName: BarredDoor, Assembly-CSharp
+        m_MethodName: CloseDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   pressSound: {fileID: 8300000, guid: 938456f83473d48f3a357cd5dfdcc69b, type: 3}
   unpressSound: {fileID: 8300000, guid: 32b21c21696b54437a687ce96d0e53a9, type: 3}
   thingsOnPlate: 0
@@ -623,9 +733,11 @@ GameObject:
   - component: {fileID: 846040800}
   - component: {fileID: 846040799}
   - component: {fileID: 846040803}
+  - component: {fileID: 846040805}
+  - component: {fileID: 846040804}
   m_Layer: 0
   m_Name: Statue
-  m_TagString: Player
+  m_TagString: Statue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -791,6 +903,119 @@ MonoBehaviour:
   sortTransform: {fileID: 168328555}
   offset: 0
   sortType: 0
+--- !u!82 &846040804
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846040798}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -7161248393526431889, guid: 1f84c53149886c34da160cb62ad1be5b, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 93f936a07e2df4fa7bd277a06bd62c30, type: 3}
+  m_Resource: {fileID: 8300000, guid: 93f936a07e2df4fa7bd277a06bd62c30, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.9
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &846040805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846040798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b6d8a2d093a34a6c9e7bbd37adb9fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theRB: {fileID: 846040800}
+  audioSource: {fileID: 846040804}
+  pushSound: {fileID: 8300000, guid: 93f936a07e2df4fa7bd277a06bd62c30, type: 3}
+  threshHold: 0.1
 --- !u!4 &929249446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2779090669262252530, guid: c5fbb42c9e2e4334088cc7758c1d33b8, type: 3}
@@ -1230,9 +1455,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -236222835
-  m_SortingLayer: -1
-  m_SortingOrder: 438
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -154
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2003,9 +2228,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -236222835
-  m_SortingLayer: -1
-  m_SortingOrder: 438
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 436
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -3212,6 +3437,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 310518702455105438, guid: 06a98a112e571b743bf41f3bdbb2b491, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 490375109414955241, guid: 06a98a112e571b743bf41f3bdbb2b491, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -3278,6 +3507,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1609477398097865318, guid: 06a98a112e571b743bf41f3bdbb2b491, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609477398097865318, guid: 06a98a112e571b743bf41f3bdbb2b491, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1921485338654390655, guid: 06a98a112e571b743bf41f3bdbb2b491, type: 3}
@@ -3718,7 +3951,7 @@ Transform:
   m_GameObject: {fileID: 4862227708338104568}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.38, z: 0}
+  m_LocalPosition: {x: -0.13, y: -4.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
