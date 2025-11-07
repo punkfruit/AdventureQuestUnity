@@ -8,7 +8,8 @@ public class LevelTransition : MonoBehaviour
     public string targetTransitionArea = "LevelTransition"; // Target transition area name in the next scene
     public bool centerPlayer = false; // Center player on the transition point
     public Side side = Side.Left;
-    public Vector2 positionOffset = new Vector2(32, 0); // Default offset for placement
+    //public Vector2 positionOffset = new Vector2(32, 0); // Default offset for placement
+    public float positionOffset;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,12 +26,12 @@ public class LevelTransition : MonoBehaviour
 
         if (side == Side.Left || side == Side.Right)
         {
-            offset.x = side == Side.Left ? -positionOffset.x : positionOffset.x;
+            offset.x = side == Side.Left ? -positionOffset : positionOffset;
             offset.y = centerPlayer ? 0 : playerPos.y - transform.position.y;
         }
         else
         {
-            offset.y = side == Side.Top ? positionOffset.y : -positionOffset.y;
+            offset.y = side == Side.Top ? positionOffset : -positionOffset;
             offset.x = centerPlayer ? 0 : playerPos.x - transform.position.x;
         }
 

@@ -2,32 +2,38 @@ using UnityEngine;
 
 public class PushableStatue : MonoBehaviour
 {
+    [SerializeField] private Rigidbody2D theRB;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip pushSound;
+    [SerializeField] private float threshHold = 0.1f;
+    [SerializeField] private float stopDelay = 0.2f;
 
-    public Rigidbody2D theRB;
-    public AudioSource audioSource;
-    public AudioClip pushSound;
+    private float stopTimer;
 
-    public float threshHold = 0.1f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        audioSource.clip = pushSound;
+        if (audioSource && pushSound)
+        {
+            audioSource.clip = pushSound;
+            audioSource.loop = true; // continuous pushing sound
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (theRB != null)
+        if (theRB == null || audioSource == null) return;
+
+        if (theRB.linearVelocity.magnitude >= threshHold)
         {
-            if (theRB.linearVelocityX >= threshHold || theRB.linearVelocityY >= threshHold || theRB.linearVelocityX <= -threshHold || theRB.linearVelocityY <= -threshHold)
-            {
-                if(!audioSource.isPlaying)
-                    audioSource.Play();
-            }
-            else
-            {
+            stopTimer = 0f;
+            if (!audioSource.isPlaying)
+                audioSource.Play();
+        }
+        else
+        {
+            stopTimer += Time.deltaTime;
+            if (stopTimer >= stopDelay)
                 audioSource.Stop();
-            }
         }
     }
 }

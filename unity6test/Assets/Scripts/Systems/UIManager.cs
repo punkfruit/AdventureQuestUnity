@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour
 
     public PlayerInput playerInput;
 
+    public bool uiAccessible = true;
+
     [Header("Inventory")]
     public GameObject inventoryPanel;
     public Button initialInventoryButton;
@@ -51,7 +53,7 @@ public class UIManager : MonoBehaviour
     [Header("Save Menu")]
     public GameObject saveMenu;
     public bool saveMenuOpen = false;
-    public Button initialSaveButton;
+    public Button initialSaveButton, initialLoadButton;
     
     
 
@@ -95,7 +97,7 @@ public class UIManager : MonoBehaviour
 
     private void OnEscapePerformed(InputAction.CallbackContext context)
     {
-        if(!DialogueManager.instance.dialogueIsPlaying && !isPaused && !questingOpen)
+        if(!DialogueManager.instance.dialogueIsPlaying && !isPaused && !questingOpen && uiAccessible)
         {
            PauseGame();
         }
@@ -161,7 +163,7 @@ public class UIManager : MonoBehaviour
 
     private void OnQuestOpenPerformed(InputAction.CallbackContext context)
     {
-        if (!questingOpen)
+        if (!questingOpen && uiAccessible)
         {
             ShowQuestMenu();
         }
@@ -177,7 +179,7 @@ public class UIManager : MonoBehaviour
 
     private void OnInventoryOpenPerformed(InputAction.CallbackContext context)
     {
-        if (!inventoryOpen)
+        if (!inventoryOpen && uiAccessible)
         {
             OpenInventory();
         }
@@ -262,7 +264,15 @@ public class UIManager : MonoBehaviour
     {
         buttonsHolder.SetActive(false);
         saveMenu.SetActive(true);
-        initialSaveButton.Select();
+        //initialSaveButton.Select();
+        if (GameManager.instance.onTitleScreen)
+        {
+            initialLoadButton.Select();
+        }
+        else
+        {
+            initialSaveButton.Select();
+        }
         saveMenuOpen = true;
     }
 

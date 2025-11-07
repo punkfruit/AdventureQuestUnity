@@ -65,6 +65,19 @@ public class SaveMenu : MonoBehaviour
             if (slotRefreshInFlight.TryGetValue(slotId, out var busy) && busy) continue;
             if (slotCooldownUntil.TryGetValue(slotId, out var until) && Time.unscaledTime < until) continue;
 
+            if (GameManager.instance != null)
+            {
+                if (GameManager.instance.onTitleScreen)
+                {
+                    row.saveButton.enabled = false; //should break the save button on the title screen mayhaps
+                }
+            }
+            else
+            {
+                Debug.LogError("Game Manager not found");
+            }
+            
+
 #if UNITY_WEBGL
             // If NGIO not ready yet, show empty for now (prevents NRE) — waiter will repopulate when ready.
             if (!IsNgioCloudReady())

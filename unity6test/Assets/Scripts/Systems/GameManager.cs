@@ -31,9 +31,16 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
 
-        if (!onTitleScreen)
+        if (onTitleScreen)
+        {
+            HealthManager.instance.heartContainer.SetActive(false);
+            UIManager.Instance.uiAccessible = false;
+            Debug.Log("OnTitleScreen");
+        }
+        else
         {
             HealthManager.instance.heartContainer.SetActive(true);
+            UIManager.Instance.uiAccessible = true;
         }
     }
 
@@ -59,6 +66,7 @@ public class GameManager : MonoBehaviour
     public void StartGame(string FirstArea)
     {
         //uiCanvas.SetActive(true);
+        UIManager.Instance.uiAccessible = true;
         HealthManager.instance.heartContainer.SetActive(true);
         LevelManager.Instance.LoadLevelFromSave(FirstArea);
     }
