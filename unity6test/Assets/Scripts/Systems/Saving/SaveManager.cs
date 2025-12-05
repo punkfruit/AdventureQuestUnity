@@ -270,6 +270,9 @@ public class SaveManager : MonoBehaviour
         InventoryManager.Instance.LoadInventoryByID(CurrentData.inventoryItems, CurrentData.inventoryItemCount);
         HealthManager.instance.LoadHealth(CurrentData.playerHealth, CurrentData.maxHealth);
         QuestManager.instance.LoadQuestProgress();
+
+        GameManager.instance.onTitleScreen = false;
+        UIManager.Instance.uiAccessible = true;
     }
 
 

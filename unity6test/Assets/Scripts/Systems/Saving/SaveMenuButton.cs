@@ -110,7 +110,7 @@ public class SaveMenuButton : MonoBehaviour
         if (SaveManager.Instance.allowedToLoad)
         {
             SaveManager.Instance.LoadGame(slotId);
-            UIManager.Instance.UnPauseGame();
+            UIManager.Instance.UnPauseGame(); //maybe make this conditional on GameManager.instance.onTitleScreen ?
         }
     }
 

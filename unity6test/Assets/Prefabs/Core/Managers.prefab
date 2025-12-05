@@ -6523,7 +6523,6 @@ RectTransform:
   - {fileID: 7107609347083359508}
   - {fileID: 5985023471948121719}
   - {fileID: 7464419926456865768}
-  - {fileID: 556756304439599525}
   m_Father: {fileID: 1777691107639148541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10663,7 +10662,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 247
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -12651,6 +12650,7 @@ RectTransform:
   - {fileID: 572081809084594775}
   - {fileID: 7863492115895626430}
   - {fileID: 5688727369727146675}
+  - {fileID: 556756304439599525}
   - {fileID: 2283431999942320953}
   - {fileID: 472327652150620521}
   m_Father: {fileID: 6379489327289029171}
@@ -17884,7 +17884,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7778877725771475784}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17892,7 +17892,7 @@ RectTransform:
   - {fileID: 3331563140303113248}
   - {fileID: 6377811462562319300}
   - {fileID: 7337063625778591668}
-  m_Father: {fileID: 5688727369727146675}
+  m_Father: {fileID: 1777691107639148541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -69,12 +69,16 @@ public class SaveMenu : MonoBehaviour
             {
                 if (GameManager.instance.onTitleScreen)
                 {
-                    row.saveButton.enabled = false; //should break the save button on the title screen mayhaps
+                    row.saveButton.gameObject.SetActive(false); //should break the save button on the title screen mayhaps
+                }
+                else
+                {
+                    row.saveButton.gameObject.SetActive(true);
                 }
             }
             else
             {
-                Debug.LogError("Game Manager not found");
+                Debug.LogError("Game Manager not found"); //this was put here cause it wasnt working at first, i simply put the gamemanager script earlier in the script execution order and it works now. leaving this here just in case
             }
             
 

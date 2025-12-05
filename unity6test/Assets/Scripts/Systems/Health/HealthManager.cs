@@ -132,6 +132,7 @@ public class HealthManager : MonoBehaviour
         health = healthh;
         InitializeHearts();
         //UpdateHealthDisplay();
+        heartContainer.SetActive(true);
         StartCoroutine(DelayedUpdateHealthDisplay());
         
         PlayerController.instance.anim.SetBool("Dead", false);

@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
     {
         //uiCanvas.SetActive(true);
         UIManager.Instance.uiAccessible = true;
+        onTitleScreen = false;
         HealthManager.instance.heartContainer.SetActive(true);
         LevelManager.Instance.LoadLevelFromSave(FirstArea);
     }
