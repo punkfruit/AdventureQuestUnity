@@ -36,6 +36,8 @@ public class DialogueManager : MonoBehaviour
         {
             instance = this;
         }
+        
+        startcoroutine(startSD);
     }
 
     private void Start()
@@ -86,8 +88,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    IEnumerator startSD()
+    {
+        yield return new WaitForSeconds(typeSpeed);
+    }
 
 
+    
 
     IEnumerator TypeSentence(string sentenceText)
     {

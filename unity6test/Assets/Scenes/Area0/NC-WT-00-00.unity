@@ -4234,6 +4234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
+    - target: {fileID: 1298731213211368917, guid: 06a98a112e571b743bf41f3bdbb2b491, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1609477398097865318, guid: 06a98a112e571b743bf41f3bdbb2b491, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4301,6 +4305,10 @@ PrefabInstance:
     - target: {fileID: 4848466009441026692, guid: 06a98a112e571b743bf41f3bdbb2b491, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907976128671415354, guid: 06a98a112e571b743bf41f3bdbb2b491, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6377811462562319300, guid: 06a98a112e571b743bf41f3bdbb2b491, type: 3}
       propertyPath: m_AnchorMax.y
