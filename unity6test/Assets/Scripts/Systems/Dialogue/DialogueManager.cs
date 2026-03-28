@@ -37,7 +37,6 @@ public class DialogueManager : MonoBehaviour
             instance = this;
         }
         
-        startcoroutine(startSD);
     }
 
     private void Start()
